@@ -153,9 +153,9 @@ function openDetails(item) {
         <ul>
           ${item.interactions.map(i => `<li>${i}</li>`).join("")}
         </ul>
-        <div style="margin-top:1.5rem">
-          <button class="button primary" id="playButton" data-id="${item.id}" style="width:100%;padding:.75rem">Play as ${item.name}</button>
-        </div>
+      </div>
+      <div style="grid-column: 1 / -1; margin-top: 1rem; display: flex; justify-content: center;">
+        <button class="button primary" id="playButton" data-id="${item.id}" style="padding:.75rem 2rem; font-size: 1rem;">Play as ${item.name}</button>
       </div>
     </div>
   `;
