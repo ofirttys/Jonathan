@@ -41,12 +41,14 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 @media (max-width: 1200px) {
   .card-grid { 
     grid-template-columns: repeat(4, 1fr); 
+    justify-content: center;
   }
 }
 
 @media (max-width: 900px) {
   .card-grid { 
     grid-template-columns: repeat(3, 1fr); 
+    justify-content: center;
   }
 }
 
