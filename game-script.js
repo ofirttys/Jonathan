@@ -6,6 +6,7 @@ const organisms = [
     role: "Producer",
     emoji: "🌱",
     description: "A sweet fruit plant that photosynthesizes.",
+    img: "organisms/Cartoon_strawberry_plant_eb02f891.png",
     traits: ["Photosynthesis", "Fruit-bearing", "Ground cover"]
   },
   {
@@ -14,6 +15,7 @@ const organisms = [
     role: "Producer",
     emoji: "🌱",
     description: "A root vegetable that grows underground.",
+    img: "organisms/Cartoon_potato_plant_e58e9460.png",
     traits: ["Tuber storage", "Cool climate", "Soil-rich"]
   },
   {
@@ -22,6 +24,7 @@ const organisms = [
     role: "Producer",
     emoji: "🌱",
     description: "Seeds that grow into pumpkin vines.",
+    img: "organisms/Cartoon_pumpkin_seeds_576b5ec3.png",
     traits: ["Vining growth", "Large leaves", "Seasonal"]
   },
   {
@@ -30,6 +33,7 @@ const organisms = [
     role: "Producer",
     emoji: "🌱",
     description: "A tall grass crop that loves sunlight.",
+    img: "organisms/Cartoon_corn_plant_58a724ab.png",
     traits: ["Wind-pollinated", "High sunlight", "Nitrogen hungry"]
   },
   {
@@ -38,6 +42,7 @@ const organisms = [
     role: "Consumer",
     emoji: "🐐",
     description: "A herbivore that eats plants.",
+    img: "organisms/Cartoon_goat_character_0191fba2.png",
     traits: ["Grazing", "Agile", "Ruminant"]
   },
   {
@@ -46,6 +51,7 @@ const organisms = [
     role: "Consumer",
     emoji: "🦆",
     description: "An omnivore that eats plants and insects.",
+    img: "organisms/Cartoon_duck_character_e6efd23f.png",
     traits: ["Aquatic", "Omnivorous", "Migratory"]
   },
   {
@@ -54,6 +60,7 @@ const organisms = [
     role: "Consumer",
     emoji: "🐔",
     description: "A bird that pecks for seeds and bugs.",
+    img: "organisms/Cartoon_chicken_character_78ddbb39.png",
     traits: ["Pecking", "Ground forager", "Social"]
   },
   {
@@ -62,6 +69,7 @@ const organisms = [
     role: "Consumer",
     emoji: "🐺",
     description: "A carnivore that hunts other animals.",
+    img: "organisms/Cartoon_wolf_character_6ecadd03.png",
     traits: ["Pack hunter", "Territorial", "Apex predator"]
   },
   {
@@ -70,6 +78,7 @@ const organisms = [
     role: "Consumer",
     emoji: "🐝",
     description: "A pollinator that feeds on nectar.",
+    img: "organisms/Cartoon_bee_character_cd9dafe6.png",
     traits: ["Pollination", "Social", "Nectar-feeding"]
   },
   {
@@ -78,6 +87,7 @@ const organisms = [
     role: "Decomposer",
     emoji: "🍄",
     description: "A fungus that breaks down organic matter.",
+    img: "organisms/Cartoon_yeast_cells_8e9a2b32.png",
     traits: ["Fermentation", "Microscopic", "Rapid growth"]
   }
 ];
@@ -131,6 +141,7 @@ function init() {
   // Get DOM elements
   elements = {
     organismName: document.getElementById("organismName"),
+    organismImage: document.getElementById("organismImage"),
     roleColor: document.getElementById("roleColor"),
     roleLabel: document.getElementById("roleLabel"),
     energyValue: document.getElementById("energyValue"),
@@ -180,6 +191,8 @@ function setupUI() {
   const org = gameState.organism;
   
   elements.organismName.textContent = org.name;
+  elements.organismImage.src = org.img;
+  elements.organismImage.alt = org.name;
   elements.roleLabel.textContent = org.role.toUpperCase();
   elements.roleColor.style.backgroundColor = roleColors[org.role];
   elements.gameTitle.textContent = gameTitles[org.role];

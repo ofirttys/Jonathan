@@ -223,6 +223,23 @@ html, body {
   text-align: center;
 }
 
+.organism-image-container {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.organism-image {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
 .game-title h2 {
   font-size: 2rem;
   font-weight: 700;
