@@ -30,7 +30,31 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
   background: var(--card); color: var(--text);
 }
 
-.card-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem; }
+.card-grid { 
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 1rem; 
+  margin-top: 1rem; 
+}
+
+/* Responsive card grid */
+@media (max-width: 1200px) {
+  .card-grid { 
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+@media (max-width: 900px) {
+  .card-grid { 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
 .card {
   background: var(--card); border: 1px solid var(--border); border-radius: .75rem;
   padding: .75rem; display: flex; flex-direction: column; gap: .5rem; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;

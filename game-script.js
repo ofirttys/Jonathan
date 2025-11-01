@@ -433,7 +433,7 @@ function endGame() {
 // Quit game
 function quitGame() {
   if (confirm("Are you sure you want to quit?")) {
-    window.location.href = "index.html";
+    window.location.href = "/";
   }
 }
 
@@ -457,7 +457,7 @@ function restartGame() {
 
 // Back to menu
 function backToMenu() {
-  window.location.href = "index.html";
+  window.location.href = "/";
 }
 
 // Initialize when DOM is ready
