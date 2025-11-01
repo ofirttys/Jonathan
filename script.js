@@ -118,6 +118,8 @@ function renderCards(list) {
   list.forEach(item => {
     const card = document.createElement("article");
     card.className = "card";
+    card.style.cursor = "pointer";
+    card.setAttribute("data-id", item.id);
     card.innerHTML = `
       <img src="${item.img}" alt="${item.name}" loading="lazy" />
       <div class="title-row">${item.name}</div>
@@ -126,10 +128,6 @@ function renderCards(list) {
         <span style="margin-left:.5rem">${item.emoji}</span>
       </div>
       <p class="desc">${item.description}</p>
-      <div class="actions">
-        <button class="button primary" data-action="play" data-id="${item.id}">Play</button>
-        <button class="button" data-action="details" data-id="${item.id}">Details</button>
-      </div>
     `;
     grid.appendChild(card);
   });
@@ -155,9 +153,17 @@ function openDetails(item) {
         <ul>
           ${item.interactions.map(i => `<li>${i}</li>`).join("")}
         </ul>
+        <div style="margin-top:1.5rem">
+          <button class="button primary" id="playButton" data-id="${item.id}" style="width:100%;padding:.75rem">Play as ${item.name}</button>
+        </div>
       </div>
     </div>
   `;
+  
+  // Add event listener for play button
+  qs("#playButton").addEventListener("click", () => {
+    window.location.href = `game.html?organism=${item.id}`;
+  });
 }
 
 function closeDetails() {
@@ -209,17 +215,15 @@ function init() {
   qs("#roleFilter").addEventListener("change", applyFilters);
   qs("#searchInput").addEventListener("input", applyFilters);
 
-  // Events: card actions
+  // Events: card clicks
   qs("#cardGrid").addEventListener("click", (e) => {
-    const btn = e.target.closest("button[data-action]");
-    if (!btn) return;
-    const id = btn.getAttribute("data-id");
+    const card = e.target.closest("article.card");
+    if (!card) return;
+    const id = card.getAttribute("data-id");
     const item = organisms.find(o => o.id === id);
     if (!item) return;
-
-    const action = btn.getAttribute("data-action");
-    if (action === "details") openDetails(item);
-    if (action === "play") window.location.href = `game.html?organism=${id}`;
+    
+    openDetails(item);
   });
 
   // Detail panel

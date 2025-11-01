@@ -33,9 +33,10 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .card-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1rem; }
 .card {
   background: var(--card); border: 1px solid var(--border); border-radius: .75rem;
-  padding: .75rem; display: flex; flex-direction: column; gap: .5rem; transition: transform .15s ease, box-shadow .15s ease;
+  padding: .75rem; display: flex; flex-direction: column; gap: .5rem; transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  cursor: pointer;
 }
-.card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.35); }
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.35); border-color: #4b5563; }
 .card img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; border-radius: .5rem; background: rgba(255,255,255,.03); }
 .card .title { font-weight: 600; font-size: 1.05rem; }
 .card .role { font-size: .9rem; color: var(--muted); }
@@ -45,7 +46,6 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .badge.consumer { color: #f59e0b; border-color: #f59e0b33; }
 .badge.decomposer { color: #3b82f6; border-color: #3b82f633; }
 
-.card .actions { display: flex; gap: .5rem; margin-top: .25rem; }
 .button {
   padding: .5rem .75rem; border-radius: .5rem; border: 1px solid var(--border);
   background: #0b1324; color: var(--text); cursor: pointer; transition: background .15s ease, border-color .15s ease;
