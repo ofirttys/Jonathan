@@ -139,6 +139,7 @@ function openDetails(item) {
   panel.classList.remove("hidden");
   content.innerHTML = `
     <div class="panel">
+      <button class="close-btn" id="closePanelBtn" aria-label="Close details">×</button>
       <div>
         <img src="${item.img}" alt="${item.name}" style="width:100%;border-radius:.5rem;background:rgba(255,255,255,.03)" />
       </div>
@@ -164,6 +165,9 @@ function openDetails(item) {
   qs("#playButton").addEventListener("click", () => {
     window.location.href = `game.html?organism=${item.id}`;
   });
+  
+  // Add event listener for close button inside panel
+  qs("#closePanelBtn").addEventListener("click", closeDetails);
 }
 
 function closeDetails() {
