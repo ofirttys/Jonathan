@@ -178,6 +178,8 @@ function init() {
 
   // Event listeners
   document.addEventListener("keydown", handleKeyPress);
+  elements.slider.addEventListener("click", checkHit);
+  elements.rhythmTrack.addEventListener("click", checkHit);
   elements.quitBtn.addEventListener("click", quitGame);
   elements.restartBtn.addEventListener("click", restartGame);
   elements.backToMenuBtn.addEventListener("click", backToMenu);

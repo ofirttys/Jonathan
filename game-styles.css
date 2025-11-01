@@ -317,6 +317,7 @@ html, body {
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 
 .hit-zone {
@@ -337,6 +338,13 @@ html, body {
   background: var(--accent-2);
   box-shadow: 0 0 10px var(--accent-2);
   will-change: transform;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.rhythm-slider:hover {
+  transform: scaleX(1.5);
+  box-shadow: 0 0 15px var(--accent-2);
 }
 
 .track-label {
