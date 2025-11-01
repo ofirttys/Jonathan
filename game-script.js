@@ -119,7 +119,8 @@ const gameState = {
   sliderSpeed: 0.8,
   hitZonePosition: 45, // percentage
   hitZoneWidth: 10, // percentage
-  difficulty: "MEDIUM",
+  difficulty: "EASY",
+  difficultyLevel: 0, // 0=Easy, 1=Medium, 2=Hard, 3=Extreme
   currentAction: "sun", // "sun" or "water"
   gameRunning: false,
   gameLoop: null,
@@ -191,6 +192,7 @@ function init() {
 // Setup UI based on organism
 function setupUI() {
   const org = gameState.organism;
+  const isConsumer = org.role === "Consumer";
   
   elements.organismName.textContent = org.name;
   elements.organismImage.src = org.img;
@@ -199,30 +201,82 @@ function setupUI() {
   elements.roleColor.style.backgroundColor = roleColors[org.role];
   elements.gameTitle.textContent = gameTitles[org.role];
   
+  // Update resource bar labels based on organism type
+  const resourceBars = document.querySelector('.resource-bars');
+  resourceBars.innerHTML = `
+    <div class="resource-card">
+      <p class="resource-label">${isConsumer ? 'Food Energy' : 'Sun Energy'}</p>
+      <div class="resource-progress">
+        <div class="resource-fill sun" id="sunBar" style="width: 0%"></div>
+      </div>
+    </div>
+    <div class="resource-card">
+      <p class="resource-label">Water Energy</p>
+      <div class="resource-progress">
+        <div class="resource-fill water" id="waterBar" style="width: 0%"></div>
+      </div>
+    </div>
+  `;
+  
+  // Re-get the bar elements after updating HTML
+  elements.sunBar = document.getElementById("sunBar");
+  elements.waterBar = document.getElementById("waterBar");
+  
   // Set initial hit zone position
   elements.hitZone.style.left = `${gameState.hitZonePosition}%`;
 }
 
 // Set difficulty based on organism role
 function setDifficulty() {
-  const role = gameState.organism.role;
-  
-  if (role === "Producer") {
-    gameState.difficulty = "EASY";
-    gameState.sliderSpeed = 0.6;
-    gameState.hitZoneWidth = 12;
-  } else if (role === "Consumer") {
-    gameState.difficulty = "MEDIUM";
-    gameState.sliderSpeed = 0.8;
-    gameState.hitZoneWidth = 10;
-  } else {
-    gameState.difficulty = "HARD";
-    gameState.sliderSpeed = 1.0;
-    gameState.hitZoneWidth = 8;
-  }
+  // All organisms start at EASY
+  gameState.difficulty = "EASY";
+  gameState.difficultyLevel = 0;
+  gameState.sliderSpeed = 0.6;
+  gameState.hitZoneWidth = 12;
   
   elements.difficultyLabel.textContent = gameState.difficulty;
   elements.hitZone.style.width = `${gameState.hitZoneWidth}%`;
+}
+
+// Increase difficulty as player progresses
+function checkDifficultyIncrease() {
+  const score = gameState.score;
+  let newLevel = gameState.difficultyLevel;
+  
+  // Difficulty thresholds
+  if (score >= 300 && gameState.difficultyLevel < 3) {
+    newLevel = 3; // EXTREME
+  } else if (score >= 200 && gameState.difficultyLevel < 2) {
+    newLevel = 2; // HARD
+  } else if (score >= 100 && gameState.difficultyLevel < 1) {
+    newLevel = 1; // MEDIUM
+  }
+  
+  if (newLevel !== gameState.difficultyLevel) {
+    gameState.difficultyLevel = newLevel;
+    
+    // Update difficulty settings
+    switch (newLevel) {
+      case 1: // MEDIUM
+        gameState.difficulty = "MEDIUM";
+        gameState.sliderSpeed = 0.8;
+        gameState.hitZoneWidth = 10;
+        break;
+      case 2: // HARD
+        gameState.difficulty = "HARD";
+        gameState.sliderSpeed = 1.0;
+        gameState.hitZoneWidth = 8;
+        break;
+      case 3: // EXTREME
+        gameState.difficulty = "EXTREME";
+        gameState.sliderSpeed = 1.3;
+        gameState.hitZoneWidth = 6;
+        break;
+    }
+    
+    elements.difficultyLabel.textContent = gameState.difficulty;
+    elements.hitZone.style.width = `${gameState.hitZoneWidth}%`;
+  }
 }
 
 // Start game
@@ -299,11 +353,15 @@ function updateAction() {
     gameState.currentAction = Math.random() > 0.5 ? "sun" : "water";
   }
   
-  // Update UI
+  // Update UI based on organism role
+  const isConsumer = gameState.organism.role === "Consumer";
+  
   if (gameState.currentAction === "sun") {
-    elements.currentAction.textContent = "☀️ Collect Sunlight!";
+    // Consumers: "Eat Food", Producers/Decomposers: "Collect Sunlight"
+    elements.currentAction.textContent = isConsumer ? "🍖 Eat Food!" : "☀️ Collect Sunlight!";
   } else {
-    elements.currentAction.textContent = "💧 Collect Water!";
+    // Everyone: "Drink Water"
+    elements.currentAction.textContent = "💧 Drink Water!";
   }
   
   // Randomize hit zone position
@@ -359,6 +417,9 @@ function handleSuccess() {
   // Add score
   const points = Math.floor(10 + gameState.difficulty === "HARD" ? 20 : gameState.difficulty === "MEDIUM" ? 15 : 10);
   gameState.score += points;
+  
+  // Check for difficulty increase
+  checkDifficultyIncrease();
   
   // Change action
   updateAction();
@@ -447,9 +508,13 @@ function restartGame() {
   gameState.waterEnergy = 0;
   gameState.sliderPosition = 0;
   gameState.sliderDirection = 1;
+  gameState.difficultyLevel = 0;
   
   // Hide game over screen
   elements.gameOverScreen.classList.add("hidden");
+  
+  // Reset difficulty
+  setDifficulty();
   
   // Restart game
   startGame();
