@@ -230,8 +230,7 @@ function init() {
     openDetails(item);
   });
 
-  // Detail panel
-  qs("#closeDetail").addEventListener("click", closeDetails);
+  // Detail panel - click outside to close
   qs("#detailPanel").addEventListener("click", (e) => {
     if (e.target.id === "detailPanel") closeDetails();
   });
