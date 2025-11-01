@@ -127,8 +127,8 @@ function renderCards(list) {
       </div>
       <p class="desc">${item.description}</p>
       <div class="actions">
-        <button class="button primary" data-action="play" data-id="${item.id}">Play</button>
-        <button class="button" data-action="details" data-id="${item.id}">Details</button>
+        <button class="button primary" data-action="details" data-id="${item.id}">Details</button>
+        <button class="button" data-action="simulate" data-id="${item.id}">Simulate</button>
       </div>
     `;
     grid.appendChild(card);
@@ -219,7 +219,7 @@ function init() {
 
     const action = btn.getAttribute("data-action");
     if (action === "details") openDetails(item);
-    if (action === "play") window.location.href = `game.html?organism=${id}`;
+    if (action === "simulate") simulate(id);
   });
 
   // Detail panel
