@@ -379,8 +379,8 @@ function gameLoop(currentTime) {
   gameState.energy -= 0.0008 * deltaTime;
   
   // Drain resources slightly (0.2% per second)
-  gameState.sunEnergy = Math.max(0, gameState.sunEnergy - 0.0003 * deltaTime);
-  gameState.waterEnergy = Math.max(0, gameState.waterEnergy - 0.0003 * deltaTime);
+  gameState.sunEnergy = Math.max(0, gameState.sunEnergy - 0.0008 * deltaTime);
+  gameState.waterEnergy = Math.max(0, gameState.waterEnergy - 0.0008 * deltaTime);
   
   // Check if both resources are low and drain energy faster
   if (gameState.sunEnergy < 20 && gameState.waterEnergy < 20) {
