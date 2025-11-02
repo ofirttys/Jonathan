@@ -48,7 +48,7 @@ const organisms = [
     description: "A herbivore that eats plants.",
     img: "organisms/Cartoon_goat_character_0191fba2.png",
     traits: ["Hardy mammal", "Grazes on shrubs and grasses", "Agile", "Adaptable"],
-    interactions: ["prevents overgrowth", "promotes plant diversity", "can cause soil erosion if overgrazing", "produces manure that enriches soil"]
+    interactions: ["Prevents overgrowth", "promotes plant diversity", "Can cause soil erosion if overgrazing", "Produces manure that enriches soil"]
   },
   {
     id: "duck",
@@ -58,7 +58,7 @@ const organisms = [
     description: "An omnivore that eats plants and insects.",
     img: "organisms/Cartoon_duck_character_e6efd23f.png",
     traits: ["Aquatic bird", "Omnivorous", "Feeds on plants/insects/aquatic organisms", "Migratory"],
-    interactions: ["stirs up sediments releasing nutrients", "droppings fertilize water and soil", "needs clean stable wetland environments", "recycles nutrients in ponds"]
+    interactions: ["Stirs up sediments releasing nutrients", "Droppings fertilize water and soil", "Needs clean stable wetland environments", "Recycles nutrients in ponds"]
   },
   {
     id: "chicken",
@@ -68,7 +68,7 @@ const organisms = [
     description: "A bird that pecks for seeds and bugs.",
     img: "organisms/Cartoon_chicken_character_78ddbb39.png",
     traits: ["Feeds on insects/seeds/scraps", "Ground forager", "Scratching behavior", "Social"],
-    interactions: ["scratching helps mix soil", "controls pests", "waste adds nutrients to soil", "depends on plants and insects for food and shelter"]
+    interactions: ["Scratching helps mix soil", "Controls pests", "Waste adds nutrients to soil", "Depends on plants and insects for food and shelter"]
   },
   {
     id: "wolf",
@@ -78,7 +78,7 @@ const organisms = [
     description: "A carnivore that hunts other animals.",
     img: "organisms/Cartoon_wolf_character_6ecadd03.png",
     traits: ["Top-level carnivore", "Forests/tundra/grasslands", "Pack hunter", "Territorial"],
-    interactions: ["preys on herbivores like deer and rabbits", "controls herbivore populations", "dens provide shelter for pups and small animals", "influences prey species behavior"]
+    interactions: ["Preys on herbivores like deer and rabbits", "Controls herbivore populations", "Dens provide shelter for pups and small animals", "Influences prey species behavior"]
   },
   {
     id: "bee",
@@ -88,7 +88,7 @@ const organisms = [
     description: "A pollinator that feeds on nectar.",
     img: "organisms/Cartoon_bee_character_cd9dafe6.png",
     traits: ["Flying insect", "Collects nectar and pollen", "Lives in colonies", "Social"],
-    interactions: ["transfers pollen between plants", "helps plants produce fruits and seeds", "sensitive to pesticides", "sensitive to habitat loss affects plant reproduction"]
+    interactions: ["Transfers pollen between plants", "Helps plants produce fruits and seeds", "Sensitive to pesticides", "Sensitive to habitat loss affects plant reproduction"]
   },
   {
     id: "yeast",
@@ -98,7 +98,7 @@ const organisms = [
     description: "A fungus that breaks down organic matter.",
     img: "organisms/Cartoon_yeast_cells_8e9a2b32.png",
     traits: ["Microscopic organism", "Feeds on sugars", "Lives on fruit surfaces and soil", "Rapid growth"],
-    interactions: ["produces carbon dioxide and alcohol", "important in fermentation", "sensitive to temperature and pH", "breaks down organic matter"]
+    interactions: ["Produces carbon dioxide and alcohol", "Important in fermentation", "Sensitive to temperature and pH", "Breaks down organic matter"]
   }
 ];
 

@@ -110,19 +110,19 @@ const gameTitles = {
 const organismTasks = {
   strawberry: {
     primary: ["☀️ Photosynthesize!", "🌸 Attract pollinators!", "🍓 Produce berries!"],
-    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Drink water!"]
+    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Stay hydrated!"]
   },
   potato: {
     primary: ["🥔 Grow tubers!", "🌱 Absorb nutrients!", "⚡ Store energy!"],
-    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Drink water!"]
+    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Stay hydrated!"]
   },
   "pumpkin-seeds": {
     primary: ["☀️ Photosynthesize!", "🌿 Spread vines!", "🎃 Produce seeds!"],
-    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Drink water!"]
+    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Stay hydrated!"]
   },
   corn: {
     primary: ["☀️ Photosynthesize!", "🌾 Grow tall!", "🌽 Produce kernels!"],
-    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Drink water!"]
+    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Stay hydrated!"]
   },
   wolf: {
     primary: ["🦌 Hunt prey!", "🐾 Mark territory!", "👃 Track scent!"],
