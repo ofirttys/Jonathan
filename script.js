@@ -8,7 +8,7 @@ const organisms = [
     description: "A sweet fruit plant that photosynthesizes.",
     img: "organisms/Cartoon_strawberry_plant_eb02f891.png",
     traits: ["Low-growing", "Produces berries", "Sunny moist fertile soil", "Leaves and runners"],
-    interactions: ["eaten by birds, mammals, and insects", "shelters small insects", "supports soil cover", "flowers attract pollinators"]
+    interactions: ["Eaten by birds, mammals, and insects", "Shelters small insects", "Supports soil cover", "Flowers attract pollinators"]
   },
   {
     id: "potato",
@@ -18,7 +18,7 @@ const organisms = [
     description: "A root vegetable that grows underground.",
     img: "organisms/Cartoon_potato_plant_e58e9460.png",
     traits: ["Underground tubers", "Cool moist environments", "Energy storage", "Hardy plant"],
-    interactions: ["important energy source for omnivores", "affects soil texture", "influences microbial activity", "can survive in cool climates"]
+    interactions: ["Important energy source for omnivores", "Affects soil texture", "Influences microbial activity", "Can survive in cool climates"]
   },
   {
     id: "pumpkin-seeds",
@@ -28,7 +28,7 @@ const organisms = [
     description: "Seeds that grow into pumpkin vines.",
     img: "organisms/Cartoon_pumpkin_seeds_576b5ec3.png",
     traits: ["Vining growth", "Sunny nutrient-rich soil", "Ground cover", "Attracts pollinators"],
-    interactions: ["reduces erosion and shelters insects", "flowers attract pollinators", "decomposed plant parts enrich soil", "edible seeds for humans and animals"]
+    interactions: ["Reduces erosion and shelters insects", "Flowers attract pollinators", "Decomposed plant parts enrich soil", "Edible seeds for humans and animals"]
   },
   {
     id: "corn",
@@ -38,7 +38,7 @@ const organisms = [
     description: "A tall grass crop that loves sunlight.",
     img: "organisms/Cartoon_corn_plant_58a724ab.png",
     traits: ["Tall and fast-growing", "Full sunlight required", "Fertile soil", "Nutrient-dense kernels"],
-    interactions: ["provides shade and microhabitats for insects", "roots stabilize soil", "uses large amounts of nitrogen", "can deplete soil without companion organisms"]
+    interactions: ["Provides shade and microhabitats for insects", "Roots stabilize soil", "Uses large amounts of nitrogen", "Can deplete soil without companion organisms"]
   },
   {
     id: "goat",

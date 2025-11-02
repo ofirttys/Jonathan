@@ -106,6 +106,50 @@ const gameTitles = {
   Decomposer: "🍄 Decompose & Recycle"
 };
 
+// Organism-specific tasks
+const organismTasks = {
+  strawberry: {
+    primary: ["☀️ Photosynthesize!", "🌸 Attract pollinators!", "🍓 Produce berries!"],
+    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Drink water!"]
+  },
+  potato: {
+    primary: ["🥔 Grow tubers!", "🌱 Absorb nutrients!", "⚡ Store energy!"],
+    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Drink water!"]
+  },
+  "pumpkin-seeds": {
+    primary: ["☀️ Photosynthesize!", "🌿 Spread vines!", "🎃 Produce seeds!"],
+    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Drink water!"]
+  },
+  corn: {
+    primary: ["☀️ Photosynthesize!", "🌾 Grow tall!", "🌽 Produce kernels!"],
+    secondary: ["💧 Absorb water!", "💧 Find moisture!", "💧 Drink water!"]
+  },
+  wolf: {
+    primary: ["🦌 Hunt prey!", "🐾 Mark territory!", "👃 Track scent!"],
+    secondary: ["💧 Find water!", "💧 Drink from stream!", "💧 Stay hydrated!"]
+  },
+  goat: {
+    primary: ["🌿 Graze plants!", "🌾 Browse shrubs!", "🍃 Find food!"],
+    secondary: ["💧 Find water!", "💧 Drink water!", "💧 Stay hydrated!"]
+  },
+  duck: {
+    primary: ["🦆 Forage for food!", "🐛 Catch insects!", "🌾 Eat plants!"],
+    secondary: ["💧 Swim in pond!", "💧 Dive for food!", "💧 Clean feathers!"]
+  },
+  chicken: {
+    primary: ["🐛 Scratch for food!", "🦗 Eat insects!", "🌾 Peck seeds!"],
+    secondary: ["💧 Find water!", "💧 Drink water!", "💧 Stay hydrated!"]
+  },
+  bee: {
+    primary: ["🌸 Collect nectar!", "🌼 Pollinate flowers!", "🍯 Make honey!"],
+    secondary: ["💧 Collect water!", "💧 Find water!", "🏠 Return to hive!"]
+  },
+  yeast: {
+    primary: ["🦠 Decompose dead organisms!", "🍬 Break down sugars!", "🧪 Ferment!"],
+    secondary: ["💧 Absorb moisture!", "💧 Find dampness!", "💧 Stay moist!"]
+  }
+};
+
 // Game state
 const gameState = {
   organism: null,
@@ -120,7 +164,7 @@ const gameState = {
   hitZonePosition: 45, // percentage
   hitZoneWidth: 10, // percentage
   difficulty: "EASY",
-  difficultyLevel: 0, // 0=Easy, 1=Medium, 2=Hard, 3=Extreme
+  difficultyLevel: 0, // 0=Easy, 1=Medium, 2=Hard, 3=Extreme, 4=Wild!
   currentAction: "sun", // "sun" or "water"
   gameRunning: false,
   gameLoop: null,
@@ -193,6 +237,7 @@ function init() {
 function setupUI() {
   const org = gameState.organism;
   const isConsumer = org.role === "Consumer";
+  const isDecomposer = org.role === "Decomposer";
   
   elements.organismName.textContent = org.name;
   elements.organismImage.src = org.img;
@@ -203,15 +248,27 @@ function setupUI() {
   
   // Update resource bar labels based on organism type
   const resourceBars = document.querySelector('.resource-bars');
+  
+  let primaryLabel = 'Sun Energy';
+  let secondaryLabel = 'Water Energy';
+  
+  if (isConsumer) {
+    primaryLabel = 'Food Energy';
+    secondaryLabel = 'Water Energy';
+  } else if (isDecomposer) {
+    primaryLabel = 'Decomposition';
+    secondaryLabel = 'Moisture';
+  }
+  
   resourceBars.innerHTML = `
     <div class="resource-card">
-      <p class="resource-label">${isConsumer ? 'Food Energy' : 'Sun Energy'}</p>
+      <p class="resource-label">${primaryLabel}</p>
       <div class="resource-progress">
         <div class="resource-fill sun" id="sunBar" style="width: 0%"></div>
       </div>
     </div>
     <div class="resource-card">
-      <p class="resource-label">Water Energy</p>
+      <p class="resource-label">${secondaryLabel}</p>
       <div class="resource-progress">
         <div class="resource-fill water" id="waterBar" style="width: 0%"></div>
       </div>
@@ -244,7 +301,9 @@ function checkDifficultyIncrease() {
   let newLevel = gameState.difficultyLevel;
   
   // Difficulty thresholds
-  if (score >= 300 && gameState.difficultyLevel < 3) {
+  if (score >= 400 && gameState.difficultyLevel < 4) {
+    newLevel = 4; // WILD!
+  } else if (score >= 300 && gameState.difficultyLevel < 3) {
     newLevel = 3; // EXTREME
   } else if (score >= 200 && gameState.difficultyLevel < 2) {
     newLevel = 2; // HARD
@@ -269,8 +328,13 @@ function checkDifficultyIncrease() {
         break;
       case 3: // EXTREME
         gameState.difficulty = "EXTREME";
-        gameState.sliderSpeed = 1.3;
+        gameState.sliderSpeed = 1.4;
         gameState.hitZoneWidth = 6;
+        break;
+      case 4: // WILD!
+        gameState.difficulty = "WILD!";
+        gameState.sliderSpeed = 1.8;
+        gameState.hitZoneWidth = 4;
         break;
     }
     
@@ -353,15 +417,27 @@ function updateAction() {
     gameState.currentAction = Math.random() > 0.5 ? "sun" : "water";
   }
   
-  // Update UI based on organism role
-  const isConsumer = gameState.organism.role === "Consumer";
+  // Get organism-specific tasks
+  const organismId = gameState.organism.id;
+  const tasks = organismTasks[organismId];
   
-  if (gameState.currentAction === "sun") {
-    // Consumers: "Eat Food", Producers/Decomposers: "Collect Sunlight"
-    elements.currentAction.textContent = isConsumer ? "🍖 Eat Food!" : "☀️ Collect Sunlight!";
+  if (tasks) {
+    if (gameState.currentAction === "sun") {
+      // Pick random primary task
+      const randomTask = tasks.primary[Math.floor(Math.random() * tasks.primary.length)];
+      elements.currentAction.textContent = randomTask;
+    } else {
+      // Pick random secondary task
+      const randomTask = tasks.secondary[Math.floor(Math.random() * tasks.secondary.length)];
+      elements.currentAction.textContent = randomTask;
+    }
   } else {
-    // Everyone: "Drink Water"
-    elements.currentAction.textContent = "💧 Drink Water!";
+    // Fallback to generic labels
+    if (gameState.currentAction === "sun") {
+      elements.currentAction.textContent = "☀️ Collect Energy!";
+    } else {
+      elements.currentAction.textContent = "💧 Drink Water!";
+    }
   }
   
   // Randomize hit zone position
