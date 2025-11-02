@@ -7,8 +7,8 @@ const organisms = [
     emoji: "🌱",
     description: "A sweet fruit plant that photosynthesizes.",
     img: "organisms/Cartoon_strawberry_plant_eb02f891.png",
-    traits: ["Photosynthesis", "Fruit-bearing", "Ground cover"],
-    interactions: ["pollinated by Bee", "eaten by Goat", "requires sunlight and water"]
+    traits: ["Low-growing", "Produces berries", "Sunny moist fertile soil", "Leaves and runners"],
+    interactions: ["eaten by birds, mammals, and insects", "shelters small insects", "supports soil cover", "flowers attract pollinators"]
   },
   {
     id: "potato",
@@ -17,8 +17,8 @@ const organisms = [
     emoji: "🌱",
     description: "A root vegetable that grows underground.",
     img: "organisms/Cartoon_potato_plant_e58e9460.png",
-    traits: ["Tuber storage", "Cool climate", "Soil-rich"],
-    interactions: ["eaten by Chicken", "competes with weeds", "benefits from good soil drainage"]
+    traits: ["Underground tubers", "Cool moist environments", "Energy storage", "Hardy plant"],
+    interactions: ["important energy source for omnivores", "affects soil texture", "influences microbial activity", "can survive in cool climates"]
   },
   {
     id: "pumpkin-seeds",
@@ -27,8 +27,8 @@ const organisms = [
     emoji: "🌱",
     description: "Seeds that grow into pumpkin vines.",
     img: "organisms/Cartoon_pumpkin_seeds_576b5ec3.png",
-    traits: ["Vining growth", "Large leaves", "Seasonal"],
-    interactions: ["pollinated by Bee", "seed dispersal by animals", "needs space to sprawl"]
+    traits: ["Vining growth", "Sunny nutrient-rich soil", "Ground cover", "Attracts pollinators"],
+    interactions: ["reduces erosion and shelters insects", "flowers attract pollinators", "decomposed plant parts enrich soil", "edible seeds for humans and animals"]
   },
   {
     id: "corn",
@@ -37,8 +37,8 @@ const organisms = [
     emoji: "🌱",
     description: "A tall grass crop that loves sunlight.",
     img: "organisms/Cartoon_corn_plant_58a724ab.png",
-    traits: ["Wind-pollinated", "High sunlight", "Nitrogen hungry"],
-    interactions: ["eaten by Duck", "provides shelter to small animals", "competes for nutrients"]
+    traits: ["Tall and fast-growing", "Full sunlight required", "Fertile soil", "Nutrient-dense kernels"],
+    interactions: ["provides shade and microhabitats for insects", "roots stabilize soil", "uses large amounts of nitrogen", "can deplete soil without companion organisms"]
   },
   {
     id: "goat",
@@ -47,8 +47,8 @@ const organisms = [
     emoji: "🍖",
     description: "A herbivore that eats plants.",
     img: "organisms/Cartoon_goat_character_0191fba2.png",
-    traits: ["Grazing", "Agile", "Ruminant"],
-    interactions: ["feeds on Strawberry and Corn", "preyed upon by Wolf", "competes with other herbivores"]
+    traits: ["Hardy mammal", "Grazes on shrubs and grasses", "Agile", "Adaptable"],
+    interactions: ["prevents overgrowth", "promotes plant diversity", "can cause soil erosion if overgrazing", "produces manure that enriches soil"]
   },
   {
     id: "duck",
@@ -57,8 +57,8 @@ const organisms = [
     emoji: "🍖",
     description: "An omnivore that eats plants and insects.",
     img: "organisms/Cartoon_duck_character_e6efd23f.png",
-    traits: ["Aquatic", "Omnivorous", "Migratory"],
-    interactions: ["feeds on Corn, insects", "avoids Wolf", "disperses seeds"]
+    traits: ["Aquatic bird", "Omnivorous", "Feeds on plants/insects/aquatic organisms", "Migratory"],
+    interactions: ["stirs up sediments releasing nutrients", "droppings fertilize water and soil", "needs clean stable wetland environments", "recycles nutrients in ponds"]
   },
   {
     id: "chicken",
@@ -67,8 +67,8 @@ const organisms = [
     emoji: "🍖",
     description: "A bird that pecks for seeds and bugs.",
     img: "organisms/Cartoon_chicken_character_78ddbb39.png",
-    traits: ["Pecking", "Ground forager", "Social"],
-    interactions: ["feeds on Potato, seeds", "preyed upon by Wolf", "controls insect populations"]
+    traits: ["Feeds on insects/seeds/scraps", "Ground forager", "Scratching behavior", "Social"],
+    interactions: ["scratching helps mix soil", "controls pests", "waste adds nutrients to soil", "depends on plants and insects for food and shelter"]
   },
   {
     id: "wolf",
@@ -77,8 +77,8 @@ const organisms = [
     emoji: "🍖",
     description: "A carnivore that hunts other animals.",
     img: "organisms/Cartoon_wolf_character_6ecadd03.png",
-    traits: ["Pack hunter", "Territorial", "Apex predator"],
-    interactions: ["preys on Goat and Chicken", "regulates herbivore populations", "competes with other predators"]
+    traits: ["Top-level carnivore", "Forests/tundra/grasslands", "Pack hunter", "Territorial"],
+    interactions: ["preys on herbivores like deer and rabbits", "controls herbivore populations", "dens provide shelter for pups and small animals", "influences prey species behavior"]
   },
   {
     id: "bee",
@@ -87,8 +87,8 @@ const organisms = [
     emoji: "🍖",
     description: "A pollinator that feeds on nectar.",
     img: "organisms/Cartoon_bee_character_cd9dafe6.png",
-    traits: ["Pollination", "Social", "Nectar-feeding"],
-    interactions: ["pollinates Strawberry and Pumpkin", "supports fruit set", "sensitive to pesticides"]
+    traits: ["Flying insect", "Collects nectar and pollen", "Lives in colonies", "Social"],
+    interactions: ["transfers pollen between plants", "helps plants produce fruits and seeds", "sensitive to pesticides", "sensitive to habitat loss affects plant reproduction"]
   },
   {
     id: "yeast",
@@ -97,8 +97,8 @@ const organisms = [
     emoji: "🍄",
     description: "A fungus that breaks down organic matter.",
     img: "organisms/Cartoon_yeast_cells_8e9a2b32.png",
-    traits: ["Fermentation", "Microscopic", "Rapid growth"],
-    interactions: ["breaks down sugars", "part of decomposition", "supports nutrient cycling"]
+    traits: ["Microscopic organism", "Feeds on sugars", "Lives on fruit surfaces and soil", "Rapid growth"],
+    interactions: ["produces carbon dioxide and alcohol", "important in fermentation", "sensitive to temperature and pH", "breaks down organic matter"]
   }
 ];
 

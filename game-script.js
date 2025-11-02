@@ -7,7 +7,7 @@ const organisms = [
     emoji: "🌱",
     description: "A sweet fruit plant that photosynthesizes.",
     img: "organisms/Cartoon_strawberry_plant_eb02f891.png",
-    traits: ["Photosynthesis", "Fruit-bearing", "Ground cover"]
+    traits: ["Low-growing", "Produces berries", "Sunny moist fertile soil", "Leaves and runners"]
   },
   {
     id: "potato",
@@ -16,7 +16,7 @@ const organisms = [
     emoji: "🌱",
     description: "A root vegetable that grows underground.",
     img: "organisms/Cartoon_potato_plant_e58e9460.png",
-    traits: ["Tuber storage", "Cool climate", "Soil-rich"]
+    traits: ["Underground tubers", "Cool moist environments", "Energy storage", "Hardy plant"]
   },
   {
     id: "pumpkin-seeds",
@@ -25,7 +25,7 @@ const organisms = [
     emoji: "🌱",
     description: "Seeds that grow into pumpkin vines.",
     img: "organisms/Cartoon_pumpkin_seeds_576b5ec3.png",
-    traits: ["Vining growth", "Large leaves", "Seasonal"]
+    traits: ["Vining growth", "Sunny nutrient-rich soil", "Ground cover", "Attracts pollinators"]
   },
   {
     id: "corn",
@@ -34,7 +34,7 @@ const organisms = [
     emoji: "🌱",
     description: "A tall grass crop that loves sunlight.",
     img: "organisms/Cartoon_corn_plant_58a724ab.png",
-    traits: ["Wind-pollinated", "High sunlight", "Nitrogen hungry"]
+    traits: ["Tall and fast-growing", "Full sunlight required", "Fertile soil", "Nutrient-dense kernels"]
   },
   {
     id: "goat",
@@ -43,7 +43,7 @@ const organisms = [
     emoji: "🐐",
     description: "A herbivore that eats plants.",
     img: "organisms/Cartoon_goat_character_0191fba2.png",
-    traits: ["Grazing", "Agile", "Ruminant"]
+    traits: ["Hardy mammal", "Grazes on shrubs and grasses", "Agile", "Adaptable"]
   },
   {
     id: "duck",
@@ -52,7 +52,7 @@ const organisms = [
     emoji: "🦆",
     description: "An omnivore that eats plants and insects.",
     img: "organisms/Cartoon_duck_character_e6efd23f.png",
-    traits: ["Aquatic", "Omnivorous", "Migratory"]
+    traits: ["Aquatic bird", "Omnivorous", "Feeds on plants/insects/aquatic organisms", "Migratory"]
   },
   {
     id: "chicken",
@@ -61,7 +61,7 @@ const organisms = [
     emoji: "🐔",
     description: "A bird that pecks for seeds and bugs.",
     img: "organisms/Cartoon_chicken_character_78ddbb39.png",
-    traits: ["Pecking", "Ground forager", "Social"]
+    traits: ["Feeds on insects/seeds/scraps", "Ground forager", "Scratching behavior", "Social"]
   },
   {
     id: "wolf",
@@ -70,7 +70,7 @@ const organisms = [
     emoji: "🐺",
     description: "A carnivore that hunts other animals.",
     img: "organisms/Cartoon_wolf_character_6ecadd03.png",
-    traits: ["Pack hunter", "Territorial", "Apex predator"]
+    traits: ["Top-level carnivore", "Forests/tundra/grasslands", "Pack hunter", "Territorial"]
   },
   {
     id: "bee",
@@ -79,7 +79,7 @@ const organisms = [
     emoji: "🐝",
     description: "A pollinator that feeds on nectar.",
     img: "organisms/Cartoon_bee_character_cd9dafe6.png",
-    traits: ["Pollination", "Social", "Nectar-feeding"]
+    traits: ["Flying insect", "Collects nectar and pollen", "Lives in colonies", "Social"]
   },
   {
     id: "yeast",
@@ -88,7 +88,7 @@ const organisms = [
     emoji: "🍄",
     description: "A fungus that breaks down organic matter.",
     img: "organisms/Cartoon_yeast_cells_8e9a2b32.png",
-    traits: ["Fermentation", "Microscopic", "Rapid growth"]
+    traits: ["Microscopic organism", "Feeds on sugars", "Lives on fruit surfaces and soil", "Rapid growth"]
   }
 ];
 
