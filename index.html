@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonathan's Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:         #0a0f1e;
+      --bg-card:    #111827;
+      --border:     rgba(255,255,255,0.07);
+      --text:       #f0f4ff;
+      --muted:      #6b7fa8;
+      /* Ecology — leafy green */
+      --green:      #4ade80;
+      --green-dim:  rgba(74,222,128,0.10);
+      --green-glow: rgba(74,222,128,0.28);
+      /* GeoTrivia — cyan */
+      --cyan:       #4fc3f7;
+      --cyan-dim:   rgba(79,195,247,0.10);
+      --cyan-glow:  rgba(79,195,247,0.28);
+    }
+
+    html, body {
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Starfield */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.55) 0%, transparent 0%),
+        radial-gradient(1px 1px at 34% 62%, rgba(255,255,255,.40) 0%, transparent 0%),
+        radial-gradient(1px 1px at 56%  9%, rgba(255,255,255,.60) 0%, transparent 0%),
+        radial-gradient(1px 1px at 78% 44%, rgba(255,255,255,.45) 0%, transparent 0%),
+        radial-gradient(1px 1px at 91% 77%, rgba(255,255,255,.50) 0%, transparent 0%),
+        radial-gradient(1px 1px at  7% 85%, rgba(255,255,255,.40) 0%, transparent 0%),
+        radial-gradient(1px 1px at 47% 32%, rgba(255,255,255,.35) 0%, transparent 0%),
+        radial-gradient(1px 1px at 23% 50%, rgba(255,255,255,.50) 0%, transparent 0%),
+        radial-gradient(1px 1px at 67% 88%, rgba(255,255,255,.40) 0%, transparent 0%),
+        radial-gradient(1px 1px at 88% 14%, rgba(255,255,255,.55) 0%, transparent 0%),
+        radial-gradient(1px 1px at  3% 30%, rgba(255,255,255,.30) 0%, transparent 0%),
+        radial-gradient(1px 1px at 52% 72%, rgba(255,255,255,.45) 0%, transparent 0%),
+        radial-gradient(1.5px 1.5px at 40%  5%, rgba(255,255,255,.70) 0%, transparent 0%),
+        radial-gradient(1.5px 1.5px at 80% 60%, rgba(255,255,255,.60) 0%, transparent 0%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Layout */
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 20px 60px;
+      gap: 48px;
+      animation: fadein 0.7s ease both;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Header */
+    .header { text-align: center; }
+    .header-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .site-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 900;
+      font-size: clamp(2.2rem, 7vw, 4rem);
+      letter-spacing: -1px;
+      line-height: 1;
+      background: linear-gradient(135deg, #ffffff 0%, #b8d4f8 50%, var(--cyan) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .header-sub {
+      margin-top: 14px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Grid */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 860px;
+    }
+
+    /* Card */
+    .game-card {
+      position: relative;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      min-height: 400px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .game-card:hover  { transform: translateY(-6px); }
+    .game-card:focus  { outline: 2px solid var(--cyan); outline-offset: 3px; }
+
+    .card-eco { border-color: rgba(74,222,128,0.15); }
+    .card-eco:hover {
+      border-color: var(--green-glow);
+      box-shadow: 0 0 60px rgba(74,222,128,0.12), 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .card-geo { border-color: rgba(79,195,247,0.15); }
+    .card-geo:hover {
+      border-color: var(--cyan-glow);
+      box-shadow: 0 0 60px rgba(79,195,247,0.12), 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    /* Animated card backgrounds */
+    .card-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    .card-bg canvas,
+    .card-bg svg { width: 100%; height: 100%; }
+
+    /* Ecology bg canvas */
+    #eco-canvas { opacity: 0.15; }
+
+    /* GeoTrivia bg svg */
+    .card-geo .card-bg svg { opacity: 0.12; }
+
+    /* Card content */
+    .card-content {
+      position: relative;
+      z-index: 2;
+      padding: 32px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-icon {
+      font-size: 3rem;
+      line-height: 1;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .card-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .card-eco .card-label { color: var(--green); }
+    .card-geo .card-label { color: var(--cyan); }
+
+    .card-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.3rem, 3.5vw, 1.65rem);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    /* Organism preview strip */
+    .org-strip {
+      display: flex;
+      gap: 6px;
+      margin: 16px 0 0;
+      flex-wrap: wrap;
+    }
+    .org-chip {
+      font-size: 0.75rem;
+      padding: 3px 9px;
+      border-radius: 20px;
+      background: var(--green-dim);
+      border: 1px solid rgba(74,222,128,0.22);
+      color: var(--green);
+    }
+
+    .card-footer {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid;
+    }
+    .card-eco .tag { background: var(--green-dim); color: var(--green); border-color: rgba(74,222,128,0.25); }
+    .card-geo .tag { background: var(--cyan-dim);  color: var(--cyan);  border-color: rgba(79,195,247,0.25); }
+
+    .card-cta {
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      transition: gap 0.2s;
+    }
+    .card-eco .card-cta { color: var(--green); }
+    .card-geo .card-cta { color: var(--cyan); }
+    .game-card:hover .card-cta { gap: 9px; }
+
+    /* Footer */
+    .site-footer {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-align: center;
+      opacity: 0.55;
+      letter-spacing: 0.3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .page { padding: 36px 16px 48px; gap: 32px; }
+      .games-grid { grid-template-columns: 1fr; }
+      .game-card { min-height: 340px; }
+      .card-content { padding: 24px 20px 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .page { animation: none; }
+      .game-card { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <header class="header">
+    <p class="header-eyebrow">Jonathan's Arcade</p>
+    <h1 class="site-title">Play Something</h1>
+    <p class="header-sub">Two games. Pick your world.</p>
+  </header>
+
+  <main class="games-grid">
+
+    <!-- Ecology Survival Game -->
+    <a class="game-card card-eco" href="/GameOfLife" aria-label="Play Ecology Survival Game">
+      <div class="card-bg">
+        <canvas id="eco-canvas"></canvas>
+      </div>
+      <div class="card-content">
+        <span class="card-icon" aria-hidden="true">🌿</span>
+        <span class="card-label">Jonathan &amp; Tyler</span>
+        <h2 class="card-title">Ecology Survival</h2>
+        <p class="card-desc">
+          Pick an organism — plant, animal, or fungus — and fight to survive
+          in a living ecosystem. Collect sun and water by hitting the rhythm
+          bar before your energy runs out.
+        </p>
+        <div class="org-strip" aria-label="Playable organisms">
+          <span class="org-chip">🌱 Strawberry</span>
+          <span class="org-chip">🌽 Corn</span>
+          <span class="org-chip">🐺 Wolf</span>
+          <span class="org-chip">🐝 Bee</span>
+          <span class="org-chip">🍄 Yeast</span>
+          <span class="org-chip">+ more</span>
+        </div>
+        <div class="card-footer">
+          <div class="card-tags">
+            <span class="tag">Survival</span>
+            <span class="tag">Ecology</span>
+            <span class="tag">Rhythm</span>
+          </div>
+          <span class="card-cta">Play <span aria-hidden="true">→</span></span>
+        </div>
+      </div>
+    </a>
+
+    <!-- GeoTrivia -->
+    <a class="game-card card-geo" href="/GeoTrivia" aria-label="Play GeoTrivia">
+      <div class="card-bg">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <line x1="0" y1="50"  x2="400" y2="50"  stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="0" y1="100" x2="400" y2="100" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="0" y1="150" x2="400" y2="150" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="0" y1="200" x2="400" y2="200" stroke="#4fc3f7" stroke-width="1"/>
+          <line x1="0" y1="250" x2="400" y2="250" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="0" y1="300" x2="400" y2="300" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="0" y1="350" x2="400" y2="350" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="50"  y1="0" x2="50"  y2="400" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="100" y1="0" x2="100" y2="400" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="150" y1="0" x2="150" y2="400" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="200" y1="0" x2="200" y2="400" stroke="#4fc3f7" stroke-width="1"/>
+          <line x1="250" y1="0" x2="250" y2="400" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="300" y1="0" x2="300" y2="400" stroke="#4fc3f7" stroke-width="0.6"/>
+          <line x1="350" y1="0" x2="350" y2="400" stroke="#4fc3f7" stroke-width="0.6"/>
+          <path d="M 30 340 Q 200 60 380 190" fill="none" stroke="#4fc3f7" stroke-width="1" stroke-dasharray="8 12">
+            <animate attributeName="stroke-dashoffset" from="0" to="-80" dur="6s" repeatCount="indefinite"/>
+          </path>
+          <circle cx="100" cy="140" r="3" fill="#4fc3f7" opacity="0.8"/>
+          <circle cx="100" cy="140" r="7" fill="none" stroke="#4fc3f7" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="250" cy="210" r="3" fill="#4fc3f7" opacity="0.8"/>
+          <circle cx="250" cy="210" r="7" fill="none" stroke="#4fc3f7" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="340" cy="110" r="2.5" fill="#4fc3f7" opacity="0.6"/>
+          <circle cx="60"  cy="280" r="2.5" fill="#4fc3f7" opacity="0.6"/>
+          <g transform="translate(362,46)" opacity="0.7">
+            <circle r="20" fill="none" stroke="#4fc3f7" stroke-width="0.8"/>
+            <polygon points="0,-18 2,-6 0,-10 -2,-6" fill="#4fc3f7"/>
+            <polygon points="0,18 2,6 0,10 -2,6"    fill="#4fc3f7" opacity="0.4"/>
+            <polygon points="-18,0 -6,2 -10,0 -6,-2" fill="#4fc3f7" opacity="0.4"/>
+            <polygon points="18,0 6,2 10,0 6,-2"    fill="#4fc3f7" opacity="0.4"/>
+            <circle r="2.5" fill="#4fc3f7"/>
+            <text y="-26" text-anchor="middle" font-size="8" font-family="Inter,sans-serif" fill="#4fc3f7" font-weight="600">N</text>
+          </g>
+        </svg>
+      </div>
+      <div class="card-content">
+        <span class="card-icon" aria-hidden="true">🌍</span>
+        <span class="card-label">Geography Quiz</span>
+        <h2 class="card-title">GeoTrivia</h2>
+        <p class="card-desc">
+          Five hints. One country. How fast can you figure it out?
+          Hints start brutally hard and get easier — win in one for
+          maximum glory. Race the clock for bonus points.
+        </p>
+        <div class="card-footer">
+          <div class="card-tags">
+            <span class="tag">Quiz</span>
+            <span class="tag">Geography</span>
+            <span class="tag">Trivia</span>
+          </div>
+          <span class="card-cta">Play <span aria-hidden="true">→</span></span>
+        </div>
+      </div>
+    </a>
+
+  </main>
+
+  <footer class="site-footer">jonathan.michaeli.ca</footer>
+
+</div>
+
+<script>
+// Ecology card background — floating organisms drifting upward
+(function () {
+  const canvas = document.getElementById('eco-canvas');
+  if (!canvas) return;
+
+  const ctx   = canvas.getContext('2d');
+  const emojis = ['🌱','🌿','🍃','🌸','🍄','🐝','🌾','🦋','🍀'];
+  let W, H, particles;
+
+  function resize() {
+    const r = canvas.parentElement.getBoundingClientRect();
+    W = canvas.width  = Math.round(r.width);
+    H = canvas.height = Math.round(r.height);
+    particles = Array.from({ length: 18 }, () => makeParticle(true));
+  }
+
+  function makeParticle(randomY) {
+    return {
+      x:     Math.random() * W,
+      y:     randomY ? Math.random() * H : H + 20,
+      size:  10 + Math.random() * 14,
+      speed: 0.25 + Math.random() * 0.45,
+      drift: (Math.random() - 0.5) * 0.3,
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      alpha: 0.4 + Math.random() * 0.5,
+    };
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => {
+      ctx.globalAlpha = p.alpha;
+      ctx.font = `${p.size}px serif`;
+      ctx.fillText(p.emoji, p.x, p.y);
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  function tick() {
+    particles.forEach((p, i) => {
+      p.y     -= p.speed;
+      p.x     += p.drift;
+      if (p.y < -30) particles[i] = makeParticle(false);
+    });
+    draw();
+    requestAnimationFrame(tick);
+  }
+
+  resize();
+  tick();
+
+  let t;
+  window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(resize, 200); });
+})();
+</script>
+
+</body>
+</html>
