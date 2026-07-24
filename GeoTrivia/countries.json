@@ -1,0 +1,1304 @@
+{
+  "countries": [
+    {
+      "id": "usa",
+      "name": "United States",
+      "emoji": "🇺🇸",
+      "difficulty": "easy",
+      "continent": "North America",
+      "didYouKnow": "The United States has the world's oldest written national constitution still in use, ratified in 1788.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Grand_Canyon_National_Park%2C_September_2011_-_panoramio_%281%29.jpg/1280px-Grand_Canyon_National_Park%2C_September_2011_-_panoramio_%281%29.jpg",
+      "hints": {
+        "hard": [
+          "This country has 50 internal administrative divisions, each with its own legislature.",
+          "It invented the internet, the telephone, and the airplane within a 100-year span.",
+          "Its southern border is defined almost entirely by a single river."
+        ],
+        "medium": [
+          "It contains the world's oldest national park, established in 1872.",
+          "More languages are spoken here than in any country in Europe.",
+          "Its national bird was nearly replaced by the wild turkey, according to one founding father."
+        ],
+        "easy": [
+          "Its capital city is NOT its largest city.",
+          "It is bordered by only two countries, one to the north and one to the south.",
+          "Its national symbol is a bald eagle."
+        ]
+      }
+    },
+    {
+      "id": "france",
+      "name": "France",
+      "emoji": "🇫🇷",
+      "difficulty": "easy",
+      "continent": "Europe",
+      "didYouKnow": "France is the most visited country in the world, attracting around 90 million tourists per year.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Eiffelturm%2C_Paris.jpg/800px-Eiffelturm%2C_Paris.jpg",
+      "hints": {
+        "hard": [
+          "This country once controlled territory spanning five continents simultaneously.",
+          "It has more UNESCO World Heritage Sites than any other European nation.",
+          "Its legal system became the template for dozens of countries after a famous emperor exported it."
+        ],
+        "medium": [
+          "It produces over 1,000 distinct types of cheese.",
+          "Its national celebration on July 14th commemorates the storming of a famous prison.",
+          "The metric system was invented here during its revolution."
+        ],
+        "easy": [
+          "Its capital is the most visited city in the world.",
+          "It is famous for its wine, fashion, and cuisine.",
+          "Its flag is a vertical tricolour of blue, white, and red."
+        ]
+      }
+    },
+    {
+      "id": "germany",
+      "name": "Germany",
+      "emoji": "🇩🇪",
+      "difficulty": "easy",
+      "continent": "Europe",
+      "didYouKnow": "Germany has over 1,500 different types of beer and around 1,300 breweries.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Neuschwanstein_Castle_SW_view.jpg/1280px-Neuschwanstein_Castle_SW_view.jpg",
+      "hints": {
+        "hard": [
+          "This country was divided into two separate states for 45 years before reunification.",
+          "It has the largest economy in Europe and the fourth largest in the world.",
+          "Its constitution, adopted in 1949, was specifically designed to prevent the rise of authoritarian rule."
+        ],
+        "medium": [
+          "It shares borders with nine different countries — more than any other European nation.",
+          "Its annual autumn festival celebrating beer draws millions of visitors to one city.",
+          "The printing press was invented here in the 15th century."
+        ],
+        "easy": [
+          "It is famous for its autobahn highway system, parts of which have no speed limit.",
+          "Its capital was a divided city for decades, separated by a famous wall.",
+          "Its flag is three horizontal stripes of black, red, and gold."
+        ]
+      }
+    },
+    {
+      "id": "brazil",
+      "name": "Brazil",
+      "emoji": "🇧🇷",
+      "difficulty": "easy",
+      "continent": "South America",
+      "didYouKnow": "Brazil is the only Portuguese-speaking country in the Americas.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Rio_de_Janeiro_-_Ipanema_e_Lagoa_Rodrigo_de_Freitas.jpg/1280px-Rio_de_Janeiro_-_Ipanema_e_Lagoa_Rodrigo_de_Freitas.jpg",
+      "hints": {
+        "hard": [
+          "This country contains roughly 60% of the world's largest tropical rainforest.",
+          "It is the only country in South America that does not have Spanish as an official language.",
+          "Its capital was purpose-built from scratch in the late 1950s and opened in 1960."
+        ],
+        "medium": [
+          "It has won the FIFA World Cup more times than any other nation.",
+          "The Amazon River, the world's largest by discharge, flows through it.",
+          "It is home to the world's largest carnival celebration, attracting millions annually."
+        ],
+        "easy": [
+          "It is the largest country in South America by both area and population.",
+          "A giant Christ statue overlooks its most famous city from a hilltop.",
+          "Its flag is green and yellow with a blue celestial globe."
+        ]
+      }
+    },
+    {
+      "id": "japan",
+      "name": "Japan",
+      "emoji": "🇯🇵",
+      "difficulty": "easy",
+      "continent": "Asia",
+      "didYouKnow": "Japan has around 6,800 islands, but the vast majority of the population lives on just four of them.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Mount_Fuji_from_Hotel_Mt_Fuji_05bs3200.jpg/1280px-Mount_Fuji_from_Hotel_Mt_Fuji_05bs3200.jpg",
+      "hints": {
+        "hard": [
+          "This island nation experiences around 1,500 earthquakes per year due to its tectonic position.",
+          "It was the only country to suffer atomic bomb attacks, in 1945.",
+          "Its writing system uses three distinct scripts simultaneously: two phonetic and one pictographic."
+        ],
+        "medium": [
+          "Its bullet train network, launched in 1964, remains one of the world's most punctual rail systems.",
+          "It has the world's highest life expectancy and a rapidly aging population.",
+          "Cherry blossom viewing is a national cultural tradition with festivals held every spring."
+        ],
+        "easy": [
+          "It is an archipelago nation in the Pacific Ocean.",
+          "Mount Fuji, its iconic volcano, is visible from its largest city on a clear day.",
+          "Its flag is a simple red circle on a white background."
+        ]
+      }
+    },
+    {
+      "id": "australia",
+      "name": "Australia",
+      "emoji": "🇦🇺",
+      "difficulty": "easy",
+      "continent": "Oceania",
+      "didYouKnow": "Australia is the only continent that is also a single country, and it is home to more venomous species than any other nation.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Sydney_Australia._%2821339175489%29.jpg/1280px-Sydney_Australia._%2821339175489%29.jpg",
+      "hints": {
+        "hard": [
+          "This country has more wild camels than any other nation — a result of 19th century imports gone feral.",
+          "Its indigenous population has the longest continuous cultural history of any people on Earth, exceeding 50,000 years.",
+          "It is the world's largest exporter of coal and iron ore."
+        ],
+        "medium": [
+          "It is both a country and a continent.",
+          "The Great Barrier Reef, the world's largest coral system, runs along its northeastern coast.",
+          "Its capital was chosen as a compromise between its two rival largest cities."
+        ],
+        "easy": [
+          "It is home to kangaroos, koalas, and the platypus.",
+          "It is located in the Southern Hemisphere, meaning its seasons are opposite to Europe's.",
+          "The Sydney Opera House is one of the most recognizable buildings in the world."
+        ]
+      }
+    },
+    {
+      "id": "canada",
+      "name": "Canada",
+      "emoji": "🇨🇦",
+      "difficulty": "easy",
+      "continent": "North America",
+      "didYouKnow": "Canada has the longest coastline of any country in the world at over 202,000 kilometres.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Niagara_Falls_-_2009-07-06.jpg/1280px-Niagara_Falls_-_2009-07-06.jpg",
+      "hints": {
+        "hard": [
+          "This country has two official languages enshrined in its constitution.",
+          "It contains 20% of the world's fresh water supply.",
+          "Its northern territory includes parts of the Arctic Circle where the sun does not set for months."
+        ],
+        "medium": [
+          "It is the second largest country in the world by total area.",
+          "Ice hockey is considered its national winter sport and a core part of cultural identity.",
+          "It shares the world's longest undefended border with its southern neighbour."
+        ],
+        "easy": [
+          "Its national symbol, the maple leaf, appears on its red and white flag.",
+          "It is famous for maple syrup, producing 71% of the world's supply.",
+          "It is located directly north of the United States."
+        ]
+      }
+    },
+    {
+      "id": "italy",
+      "name": "Italy",
+      "emoji": "🇮🇹",
+      "difficulty": "easy",
+      "continent": "Europe",
+      "didYouKnow": "Italy has more UNESCO World Heritage Sites than any other country in the world, with 58 listed sites.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/1280px-Colosseo_2020.jpg",
+      "hints": {
+        "hard": [
+          "This country contains two independent states entirely within its borders.",
+          "It unification as a modern nation only occurred in 1861 — relatively recent for a European country.",
+          "It is shaped like a boot and is surrounded by five different seas."
+        ],
+        "medium": [
+          "Its ancient empire once controlled territory from Britain to Mesopotamia.",
+          "It is the birthplace of opera, the Renaissance, and pizza.",
+          "Its fashion capital hosts one of the world's four major fashion weeks."
+        ],
+        "easy": [
+          "It is famous for its pasta, pizza, and espresso.",
+          "The Colosseum, one of the ancient world's greatest structures, stands in its capital.",
+          "Its flag is a vertical tricolour of green, white, and red."
+        ]
+      }
+    },
+    {
+      "id": "spain",
+      "name": "Spain",
+      "emoji": "🇪🇸",
+      "difficulty": "easy",
+      "continent": "Europe",
+      "didYouKnow": "Spanish is the world's second most spoken native language, and Spain exported it to over 20 countries.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Sagrada_Familia_01.jpg/800px-Sagrada_Familia_01.jpg",
+      "hints": {
+        "hard": [
+          "This country once controlled the largest empire in history by some measures, spanning the Americas, Africa, and Asia.",
+          "It has 17 autonomous communities, each with significant self-governing powers — some with their own official languages.",
+          "It is the second largest country in the European Union by area."
+        ],
+        "medium": [
+          "Its most famous unfinished building has been under construction since 1882 and is still incomplete.",
+          "Its national sport involves a matador and a bull in an arena.",
+          "The Running of the Bulls festival is held here every July."
+        ],
+        "easy": [
+          "Flamenco dance and guitar are iconic cultural exports of this country.",
+          "It occupies most of the Iberian Peninsula.",
+          "Real Madrid and FC Barcelona, two of the world's most famous football clubs, are based here."
+        ]
+      }
+    },
+    {
+      "id": "mexico",
+      "name": "Mexico",
+      "emoji": "🇲🇽",
+      "difficulty": "easy",
+      "continent": "North America",
+      "didYouKnow": "Mexico City is built on the ruins of Tenochtitlan, the ancient Aztec capital, and sinks about 10 cm per year.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/24701-nature-natural-beauty-mexico.jpg/1280px-24701-nature-natural-beauty-mexico.jpg",
+      "hints": {
+        "hard": [
+          "This country is the 11th most populous in the world and the most populous Spanish-speaking nation.",
+          "It was home to the Aztec and Maya civilizations, whose ruins are still visited by millions.",
+          "It is one of the world's most biodiverse countries, ranking 5th globally."
+        ],
+        "medium": [
+          "Its cuisine — including tacos, mole, and guacamole — is recognized by UNESCO as intangible cultural heritage.",
+          "It borders three countries: two to the north and one to the south.",
+          "Day of the Dead is a nationally celebrated holiday unique to this country's cultural traditions."
+        ],
+        "easy": [
+          "It is the largest Spanish-speaking country in the world by population.",
+          "It shares its northern border with the United States.",
+          "Its flag features an eagle on a cactus devouring a snake."
+        ]
+      }
+    },
+    {
+      "id": "china",
+      "name": "China",
+      "emoji": "🇨🇳",
+      "difficulty": "easy",
+      "continent": "Asia",
+      "didYouKnow": "China invented paper, printing, gunpowder, and the compass — four inventions that transformed human civilization.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/1280px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg",
+      "hints": {
+        "hard": [
+          "This country has the most international land borders of any nation, sharing borders with 14 countries.",
+          "Its economy overtook Japan's in 2010 to become the world's second largest.",
+          "It operates under a one-party political system that has been in continuous power since 1949."
+        ],
+        "medium": [
+          "Its iconic ancient defensive structure stretches over 21,000 kilometres.",
+          "It is the world's largest manufacturer and exporter of goods.",
+          "Its writing system uses thousands of characters, each representing a word or concept."
+        ],
+        "easy": [
+          "It is the most populous country in the world — or was until recently.",
+          "The giant panda is its national animal and a global symbol of wildlife conservation.",
+          "Its flag is red with a large yellow star and four smaller ones."
+        ]
+      }
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "emoji": "🇮🇳",
+      "difficulty": "easy",
+      "continent": "Asia",
+      "didYouKnow": "India has over 1,600 dialects and languages spoken across the country, with 22 officially recognized ones.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Taj_Mahal_in_India_-_Kristian_Bertel.jpg/1280px-Taj_Mahal_in_India_-_Kristian_Bertel.jpg",
+      "hints": {
+        "hard": [
+          "This country launched a mission to Mars for less money than the Hollywood film Gravity cost to produce.",
+          "It has the world's largest democracy, holding elections involving over 900 million eligible voters.",
+          "Chess, the number zero, and the decimal system are all believed to have originated here."
+        ],
+        "medium": [
+          "It is the world's largest producer of milk, spices, and tea.",
+          "Its film industry, based in Mumbai, produces more films annually than any other country.",
+          "The Himalayan mountain range runs along its northern border."
+        ],
+        "easy": [
+          "The Taj Mahal, one of the Seven Wonders of the World, is located here.",
+          "It recently surpassed China to become the world's most populous country.",
+          "The sacred River Ganges flows through its heartland."
+        ]
+      }
+    },
+    {
+      "id": "uk",
+      "name": "United Kingdom",
+      "emoji": "🇬🇧",
+      "difficulty": "easy",
+      "continent": "Europe",
+      "didYouKnow": "The United Kingdom has never had a written constitution — it operates on a system of conventions, statutes, and common law.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Big_Ben_close-up.jpg/800px-Big_Ben_close-up.jpg",
+      "hints": {
+        "hard": [
+          "At its peak, this country's empire covered 24% of the Earth's land surface.",
+          "It is a constitutional monarchy made up of four distinct constituent countries.",
+          "The industrial revolution began here in the late 18th century, changing the world forever."
+        ],
+        "medium": [
+          "English, the world's most widely spoken second language, originated here.",
+          "It voted to leave a major political union in a 2016 referendum, a process nicknamed after itself.",
+          "Shakespeare, Newton, Darwin, and the Beatles all came from this country."
+        ],
+        "easy": [
+          "It consists of England, Scotland, Wales, and Northern Ireland.",
+          "The Queen's Guard in red tunics and bearskin hats is one of its most famous images.",
+          "It drives on the left side of the road."
+        ]
+      }
+    },
+    {
+      "id": "egypt",
+      "name": "Egypt",
+      "emoji": "🇪🇬",
+      "difficulty": "easy",
+      "continent": "Africa",
+      "didYouKnow": "Ancient Egypt lasted over 3,000 years — longer than the gap between Cleopatra's time and today.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/1280px-Kheops-Pyramid.jpg",
+      "hints": {
+        "hard": [
+          "This country controls one of the world's most strategically vital artificial waterways.",
+          "Its capital is the largest city in Africa and the Arab world.",
+          "It was among the first countries to sign a peace treaty with Israel, in 1979."
+        ],
+        "medium": [
+          "The Nile, the world's longest river, flows through it from south to north.",
+          "Papyrus, one of the earliest writing materials, was invented here.",
+          "Its ancient rulers built tombs that are among the last remaining wonders of the ancient world."
+        ],
+        "easy": [
+          "The Great Pyramids of Giza are one of its most iconic landmarks.",
+          "It is located in the northeastern corner of Africa, bordering the Mediterranean and Red Sea.",
+          "The Sphinx, a massive limestone statue, stands guard near its most famous monuments."
+        ]
+      }
+    },
+    {
+      "id": "russia",
+      "name": "Russia",
+      "emoji": "🇷🇺",
+      "difficulty": "easy",
+      "continent": "Europe/Asia",
+      "didYouKnow": "Russia spans 11 time zones — when it's midnight on its western border, it's already midday on its eastern coast.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Saint_Basil%27s_Cathedral_and_Red_Square.jpg/1280px-Saint_Basil%27s_Cathedral_and_Red_Square.jpg",
+      "hints": {
+        "hard": [
+          "This country contains Lake Baikal, which holds about 20% of the world's unfrozen surface fresh water.",
+          "It was the first country to send a human to space, in 1961.",
+          "Its Trans-Siberian Railway is the longest railway line in the world at over 9,000 kilometres."
+        ],
+        "medium": [
+          "It spans two continents and 11 time zones.",
+          "Its famous winter contributed to the defeat of both Napoleon and Hitler.",
+          "The Bolshevik Revolution of 1917 transformed it into the world's first communist state."
+        ],
+        "easy": [
+          "It is the largest country in the world by land area.",
+          "Its iconic onion-domed cathedral sits on Red Square in the capital.",
+          "Vodka and matryoshka dolls are among its most famous cultural exports."
+        ]
+      }
+    },
+    {
+      "id": "argentina",
+      "name": "Argentina",
+      "emoji": "🇦🇷",
+      "difficulty": "easy",
+      "continent": "South America",
+      "didYouKnow": "Argentina has produced five Nobel Prize winners — the most of any Latin American country.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Buenos_Aires_-_Avenida_9_de_Julio.jpg/1280px-Buenos_Aires_-_Avenida_9_de_Julio.jpg",
+      "hints": {
+        "hard": [
+          "This country claims sovereignty over the Falkland Islands, which it went to war over in 1982.",
+          "It is the eighth largest country in the world by area.",
+          "Patagonia, one of the world's most remote and dramatic landscapes, occupies its southern third."
+        ],
+        "medium": [
+          "It is the birthplace of tango, both the music and the dance.",
+          "It is one of the world's leading producers of beef and soy.",
+          "Its capital has the widest avenue in the world — 16 lanes across."
+        ],
+        "easy": [
+          "It produced Lionel Messi and Diego Maradona, two of football's greatest players.",
+          "It is the second largest country in South America.",
+          "Its flag features a sun with a face, called the Sun of May."
+        ]
+      }
+    },
+    {
+      "id": "south_africa",
+      "name": "South Africa",
+      "emoji": "🇿🇦",
+      "difficulty": "easy",
+      "continent": "Africa",
+      "didYouKnow": "South Africa is the only country in the world to have voluntarily dismantled its nuclear weapons program.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Cape_Town_from_the_slopes_of_Table_Mountain.jpg/1280px-Cape_Town_from_the_slopes_of_Table_Mountain.jpg",
+      "hints": {
+        "hard": [
+          "This country has three capital cities — one legislative, one executive, and one judicial.",
+          "It is the world's largest producer of platinum and chromium.",
+          "It hosted both the FIFA World Cup in 2010 and the Rugby World Cup in 1995, both historic firsts for the continent."
+        ],
+        "medium": [
+          "Its apartheid system of racial segregation ended in 1994 with its first fully democratic election.",
+          "Nelson Mandela, who spent 27 years in prison, became its first Black president.",
+          "It has 11 official languages — more than almost any country on Earth."
+        ],
+        "easy": [
+          "It is located at the southern tip of the African continent.",
+          "The Big Five — lion, elephant, buffalo, leopard, and rhino — are found in its national parks.",
+          "Cape Town and Johannesburg are its most famous cities."
+        ]
+      }
+    },
+    {
+      "id": "greece",
+      "name": "Greece",
+      "emoji": "🇬🇷",
+      "difficulty": "easy",
+      "continent": "Europe",
+      "didYouKnow": "Greece has more archaeological museums than any other country in the world.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Acropolis_of_Athens_01361.jpg/1280px-Acropolis_of_Athens_01361.jpg",
+      "hints": {
+        "hard": [
+          "This country is considered the birthplace of democracy, philosophy, and the Olympic Games.",
+          "It has around 6,000 islands, of which only about 200 are inhabited.",
+          "Its language has been in continuous use for over 3,000 years, the longest of any European language."
+        ],
+        "medium": [
+          "Its ancient myths — featuring Zeus, Athena, Poseidon, and Hercules — have influenced Western culture for millennia.",
+          "It joined a major economic union in 1981 and later required a historic financial bailout from it.",
+          "The Parthenon, sitting on its most famous hilltop, is one of the most recognized ancient structures."
+        ],
+        "easy": [
+          "It is a Mediterranean country made up of a mainland and thousands of islands.",
+          "The ancient Olympics were first held here.",
+          "Its flag is blue and white with a cross in the corner."
+        ]
+      }
+    },
+    {
+      "id": "netherlands",
+      "name": "Netherlands",
+      "emoji": "🇳🇱",
+      "difficulty": "easy",
+      "continent": "Europe",
+      "didYouKnow": "About one-third of the Netherlands lies below sea level, kept dry by an elaborate system of dikes and pumps.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Kinderdijk_windmills.jpg/1280px-Kinderdijk_windmills.jpg",
+      "hints": {
+        "hard": [
+          "This country engineered nearly 20% of its entire landmass out of the sea.",
+          "It was the first country in the world to legalize same-sex marriage, in 2001.",
+          "Its colonial trading company, the VOC, was the world's first publicly traded corporation."
+        ],
+        "medium": [
+          "It is famous for tulip cultivation, windmills, and an elaborate canal network in its capital.",
+          "It is one of the world's largest exporters of agricultural products despite its small size.",
+          "Anne Frank hid from the Nazis in a secret annex in its capital city."
+        ],
+        "easy": [
+          "Windmills, tulips, wooden clogs, and cycling are its most iconic cultural images.",
+          "It is a small, flat country in Western Europe known for its liberal social policies.",
+          "Its flag is a horizontal tricolour of red, white, and blue."
+        ]
+      }
+    },
+    {
+      "id": "sweden",
+      "name": "Sweden",
+      "emoji": "🇸🇪",
+      "difficulty": "easy",
+      "continent": "Europe",
+      "didYouKnow": "Sweden has the world's oldest national park outside of North America and over 800 nature reserves.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Stockholm_-_Riddarfjarden.jpg/1280px-Stockholm_-_Riddarfjarden.jpg",
+      "hints": {
+        "hard": [
+          "This country was one of the most feared military powers in Europe during the 17th century.",
+          "It has not participated in any war for over 200 years, one of the longest periods of peace for any nation.",
+          "The Nobel Prize, awarded annually in most categories here, was established by one of its citizens."
+        ],
+        "medium": [
+          "IKEA, Spotify, H&M, and Minecraft all originated in this country.",
+          "It has one of the world's highest gender equality rankings and parental leave policies.",
+          "The northern third of the country lies within the Arctic Circle."
+        ],
+        "easy": [
+          "It is a Scandinavian country known for its Viking heritage and social welfare system.",
+          "ABBA and IKEA are two of its most globally recognized exports.",
+          "Its flag is a yellow cross on a blue background."
+        ]
+      }
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey",
+      "emoji": "🇹🇷",
+      "difficulty": "medium",
+      "continent": "Europe/Asia",
+      "didYouKnow": "Istanbul is the only city in the world that straddles two continents — Europe and Asia.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hagia_Sophia_Mars_2013.jpg/1280px-Hagia_Sophia_Mars_2013.jpg",
+      "hints": {
+        "hard": [
+          "This country's territory is split between two continents by a narrow strait that connects two major seas.",
+          "It is home to the site of Troy, made famous by Homer's Iliad.",
+          "It controls the Bosphorus Strait, one of the world's most strategically important waterways."
+        ],
+        "medium": [
+          "Its largest city is divided by water into a European side and an Asian side.",
+          "It contains more ancient Greek ruins than Greece itself.",
+          "Its most famous historical building was a church, then a mosque, then a museum, then a mosque again."
+        ],
+        "easy": [
+          "It bridges the continents of Europe and Asia.",
+          "The whirling dervish, a form of spinning Sufi meditation, originated here.",
+          "Its flag features a white crescent moon and star on a red background."
+        ]
+      }
+    },
+    {
+      "id": "poland",
+      "name": "Poland",
+      "emoji": "🇵🇱",
+      "difficulty": "medium",
+      "continent": "Europe",
+      "didYouKnow": "Poland was the first country in Europe to adopt a written constitution, in May 1791 — the second written national constitution in history after the USA.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Krakow_main_square.jpg/1280px-Krakow_main_square.jpg",
+      "hints": {
+        "hard": [
+          "This country was erased from the map entirely for 123 years, partitioned among three neighbouring empires.",
+          "It lost approximately 17% of its population during World War II — the highest percentage of any country.",
+          "Marie Curie, the only person to win Nobel Prizes in two different sciences, was born here."
+        ],
+        "medium": [
+          "Its Solidarity trade union movement in the 1980s was a major catalyst for the collapse of communism in Europe.",
+          "It has the largest economy in Central and Eastern Europe.",
+          "Pierogi, kielbasa, and borscht are among its most well-known traditional foods."
+        ],
+        "easy": [
+          "It is located in Central Europe, bordered by Germany to the west and Russia to the northeast.",
+          "The Auschwitz concentration camp, now a museum and memorial, is located here.",
+          "Its flag is two horizontal stripes — white on top and red on the bottom."
+        ]
+      }
+    },
+    {
+      "id": "ukraine",
+      "name": "Ukraine",
+      "emoji": "🇺🇦",
+      "difficulty": "medium",
+      "continent": "Europe",
+      "didYouKnow": "Ukraine is the largest country located entirely within Europe by land area.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Kiev_Pechersk_Lavra.jpg/1280px-Kiev_Pechersk_Lavra.jpg",
+      "hints": {
+        "hard": [
+          "This country contains Chernobyl, the site of the world's worst nuclear disaster in 1986.",
+          "It is known as the 'breadbasket of Europe' for its vast fertile agricultural plains.",
+          "Its capital was one of the most important cities in medieval European history."
+        ],
+        "medium": [
+          "It is the largest country located entirely in Europe.",
+          "Its flag colors represent a blue sky above golden wheat fields.",
+          "It gained independence in 1991 when the Soviet Union dissolved."
+        ],
+        "easy": [
+          "It has been at the centre of a major military conflict since 2022.",
+          "Its capital city is Kyiv.",
+          "Its flag is two horizontal stripes of blue and yellow."
+        ]
+      }
+    },
+    {
+      "id": "saudi_arabia",
+      "name": "Saudi Arabia",
+      "emoji": "🇸🇦",
+      "difficulty": "medium",
+      "continent": "Asia",
+      "didYouKnow": "Saudi Arabia has no rivers or permanent lakes — its water comes entirely from aquifers and desalination plants.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Masjid_Al_Haram_-_Makkah%2C_Saudi_Arabia.jpg/1280px-Masjid_Al_Haram_-_Makkah%2C_Saudi_Arabia.jpg",
+      "hints": {
+        "hard": [
+          "This country has no permanent rivers or natural lakes despite being the size of Western Europe.",
+          "It controls roughly 17% of the world's proven petroleum reserves.",
+          "It is the only country with a flag that features writing — a religious declaration and a sword."
+        ],
+        "medium": [
+          "It is home to Islam's two holiest cities, which millions of Muslims are obligated to visit once in their lifetime.",
+          "Women were not permitted to drive in this country until 2018.",
+          "It is governed by an absolute monarchy from the founding royal family."
+        ],
+        "easy": [
+          "It occupies most of the Arabian Peninsula.",
+          "Mecca and Medina, the holiest cities in Islam, are located here.",
+          "It is the world's largest oil exporter."
+        ]
+      }
+    },
+    {
+      "id": "south_korea",
+      "name": "South Korea",
+      "emoji": "🇰🇷",
+      "difficulty": "medium",
+      "continent": "Asia",
+      "didYouKnow": "South Korea has the fastest average internet speeds in the world and one of the highest smartphone penetration rates.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Gyeongbokgung_Palace_Geunjeongmun_2.jpg/1280px-Gyeongbokgung_Palace_Geunjeongmun_2.jpg",
+      "hints": {
+        "hard": [
+          "This country went from one of the world's poorest nations to a high-income economy in a single generation — a transformation called its 'Miracle.'",
+          "It has mandatory military service for all male citizens.",
+          "It is home to some of the world's largest conglomerates including a company that makes phones, ships, and insurance."
+        ],
+        "medium": [
+          "K-pop and K-dramas have become global cultural phenomena originating from this country.",
+          "It shares a heavily fortified border with one of the world's most isolated nations to the north.",
+          "Its capital is home to over half the country's total population in its metropolitan area."
+        ],
+        "easy": [
+          "BTS and Blackpink are among the most globally famous music acts from this country.",
+          "It is located on a peninsula in East Asia.",
+          "Its flag features a red and blue Yin-Yang symbol on a white background."
+        ]
+      }
+    },
+    {
+      "id": "thailand",
+      "name": "Thailand",
+      "emoji": "🇹🇭",
+      "difficulty": "medium",
+      "continent": "Asia",
+      "didYouKnow": "Thailand is the only country in Southeast Asia that was never colonized by a European power.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/24701-nature-natural-beauty-thailand.jpg/1280px-24701-nature-natural-beauty-thailand.jpg",
+      "hints": {
+        "hard": [
+          "This country is the world's second largest exporter of rice and a major producer of rubber.",
+          "It was formerly known by a name meaning 'Land of the Free.'",
+          "It is the only Southeast Asian nation that was never colonized by a European power."
+        ],
+        "medium": [
+          "It is a constitutional monarchy where the royal family is held in extremely high reverence by law.",
+          "Muay Thai, a combat sport using fists, elbows, knees, and shins, was developed here.",
+          "Its most sacred temple in the capital contains a famous Emerald Buddha statue."
+        ],
+        "easy": [
+          "It is one of the most visited countries in the world for tourism.",
+          "Pad thai, green curry, and mango sticky rice are among its most famous dishes.",
+          "Elephants hold deep cultural significance in this Southeast Asian country."
+        ]
+      }
+    },
+    {
+      "id": "nigeria",
+      "name": "Nigeria",
+      "emoji": "🇳🇬",
+      "difficulty": "medium",
+      "continent": "Africa",
+      "didYouKnow": "Nigeria produces more films per year than any country except India, a film industry known as Nollywood.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Lagos_Island_%28satellite%29.jpg/1280px-Lagos_Island_%28satellite%29.jpg",
+      "hints": {
+        "hard": [
+          "This country has over 500 distinct ethnic groups and speaks more languages than any other African nation.",
+          "It is Africa's largest economy, driven largely by oil production and a massive services sector.",
+          "Its population is projected to surpass the United States by 2050."
+        ],
+        "medium": [
+          "It is the most populous country in Africa.",
+          "Its film industry, nicknamed after Hollywood, is the second most prolific in the world.",
+          "It is one of the world's leading oil producers, with the Niger Delta being a major production zone."
+        ],
+        "easy": [
+          "It is the most populous country in Africa, with over 200 million people.",
+          "It is located in West Africa on the Gulf of Guinea.",
+          "Its flag is two vertical green stripes with a white stripe in the middle."
+        ]
+      }
+    },
+    {
+      "id": "kenya",
+      "name": "Kenya",
+      "emoji": "🇰🇪",
+      "difficulty": "medium",
+      "continent": "Africa",
+      "didYouKnow": "Kenya's Great Rift Valley is considered the cradle of humanity — some of the oldest known human fossils were found there.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Masai_Mara_Kenya_Africa.jpg/1280px-Masai_Mara_Kenya_Africa.jpg",
+      "hints": {
+        "hard": [
+          "This country straddles the equator yet has a highland interior that experiences cool temperatures year-round.",
+          "It is the dominant global power in long-distance running, particularly marathons and 1500m events.",
+          "It hosts one of the world's greatest wildlife spectacles — the annual migration of over a million wildebeest."
+        ],
+        "medium": [
+          "Its famous national reserve shares its name with the Maasai people who have herded cattle there for centuries.",
+          "Nairobi, its capital, is one of Africa's few cities with a national park visible from its skyline.",
+          "It produces some of the world's most prized tea and coffee."
+        ],
+        "easy": [
+          "It is famous for its safari wildlife, including lions, elephants, and giraffes.",
+          "It is located on the eastern coast of Africa, on the Indian Ocean.",
+          "The Great Rift Valley, a massive geological trench, runs through it."
+        ]
+      }
+    },
+    {
+      "id": "colombia",
+      "name": "Colombia",
+      "emoji": "🇨🇴",
+      "difficulty": "medium",
+      "continent": "South America",
+      "didYouKnow": "Colombia is the only country in South America with coastlines on both the Pacific Ocean and the Caribbean Sea.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Cartagena_de_Indias_-_Colombia.jpg/1280px-Cartagena_de_Indias_-_Colombia.jpg",
+      "hints": {
+        "hard": [
+          "This country is the world's leading producer of high-quality emeralds.",
+          "It has coastlines on both the Pacific Ocean and the Caribbean Sea.",
+          "Gabriel García Márquez, the Nobel-winning author of One Hundred Years of Solitude, was born here."
+        ],
+        "medium": [
+          "It is the world's third largest producer of coffee, known for its rich mountain-grown beans.",
+          "Its biodiversity is second only to Brazil, with the most bird species of any country on Earth.",
+          "Shakira and Sofia Vergara are among its globally recognized celebrities."
+        ],
+        "easy": [
+          "It is the world's second largest producer of coffee after Brazil and Vietnam.",
+          "It is named after Christopher Columbus.",
+          "Cumbia and vallenato are among its most famous traditional music styles."
+        ]
+      }
+    },
+    {
+      "id": "chile",
+      "name": "Chile",
+      "emoji": "🇨🇱",
+      "difficulty": "medium",
+      "continent": "South America",
+      "didYouKnow": "Chile is home to the driest non-polar desert on Earth — the Atacama — where some areas have never recorded rainfall.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Torres_del_Paine_Chile.jpg/1280px-Torres_del_Paine_Chile.jpg",
+      "hints": {
+        "hard": [
+          "This country is the world's largest producer of copper, supplying roughly 28% of global output.",
+          "It is the longest country in the world from north to south — stretching over 4,300 kilometres.",
+          "Easter Island, home to the famous Moai stone statues, is its territory despite being in the middle of the Pacific."
+        ],
+        "medium": [
+          "It contains the Atacama Desert, the driest place on Earth outside of the polar regions.",
+          "It is one of only five countries in the world with a Mediterranean climate type.",
+          "Its southern region, Patagonia, is shared with its eastern neighbour and known for dramatic glaciers."
+        ],
+        "easy": [
+          "It is an extremely long and narrow country running down the western coast of South America.",
+          "The Andes mountain range forms its eastern border.",
+          "It is famous for its wine production in fertile central valleys."
+        ]
+      }
+    },
+    {
+      "id": "portugal",
+      "name": "Portugal",
+      "emoji": "🇵🇹",
+      "difficulty": "medium",
+      "continent": "Europe",
+      "didYouKnow": "Portugal is the oldest nation-state in Europe with its borders almost unchanged since 1139.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Lisbon_Alfama_District_October_2013.jpg/1280px-Lisbon_Alfama_District_October_2013.jpg",
+      "hints": {
+        "hard": [
+          "This small country once controlled a maritime empire stretching from Brazil to Japan, pioneering the Age of Exploration.",
+          "Vasco da Gama, who discovered the sea route to India, was born here.",
+          "Its melancholic folk music genre, fado, is recognized by UNESCO as intangible cultural heritage."
+        ],
+        "medium": [
+          "It is the westernmost country in mainland Europe.",
+          "It exports port wine, cork (producing over 50% of the world's supply), and custard tarts.",
+          "It sent explorers who mapped the coasts of Africa, India, Brazil, and Japan in the 15th–16th centuries."
+        ],
+        "easy": [
+          "It occupies the western portion of the Iberian Peninsula.",
+          "It colonized Brazil, which is why Brazilians speak Portuguese.",
+          "Its flag is split vertically into green and red, with a complex coat of arms."
+        ]
+      }
+    },
+    {
+      "id": "romania",
+      "name": "Romania",
+      "emoji": "🇷🇴",
+      "difficulty": "medium",
+      "continent": "Europe",
+      "didYouKnow": "Romania's Transfăgărășan Highway, carved through the Carpathian mountains, has been called the world's most spectacular road.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bran_Castle_%28Dracula%27s_Castle%29.jpg/800px-Bran_Castle_%28Dracula%27s_Castle%29.jpg",
+      "hints": {
+        "hard": [
+          "This country's orphanage crisis after 1989 shocked the world and led to widespread international adoptions.",
+          "It has the largest building in Europe by floor area — a massive palace constructed by its communist dictator.",
+          "Its gymnast Nadia Comaneci scored the first perfect 10 in Olympic history in 1976."
+        ],
+        "medium": [
+          "It is home to Transylvania, the region that inspired the legend of Count Dracula.",
+          "It has the largest gold reserves in Central and Eastern Europe.",
+          "Its language is a Romance language descended directly from Latin, making it distinct among its Slavic-speaking neighbours."
+        ],
+        "easy": [
+          "Dracula's castle — Bran Castle — is located in its Transylvania region.",
+          "It is located in southeastern Europe, bordering the Black Sea.",
+          "Its flag is three vertical stripes of blue, yellow, and red."
+        ]
+      }
+    },
+    {
+      "id": "vietnam",
+      "name": "Vietnam",
+      "emoji": "🇻🇳",
+      "difficulty": "medium",
+      "continent": "Asia",
+      "didYouKnow": "Vietnam is the world's largest exporter of cashews and the second largest exporter of coffee.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Ha_Long_Bay_Vietnam_%2849860086853%29.jpg/1280px-Ha_Long_Bay_Vietnam_%2849860086853%29.jpg",
+      "hints": {
+        "hard": [
+          "This country's iconic bay, with over 1,600 limestone islands, was formed by millennia of erosion and is a UNESCO World Heritage Site.",
+          "It defeated three superpowers militarily in the 20th century: Japan, France, and the United States.",
+          "It is the world's third largest exporter of rice."
+        ],
+        "medium": [
+          "Its S-shaped coastline runs for over 3,000 kilometres along the South China Sea.",
+          "Pho, banh mi, and spring rolls are among its most internationally recognized dishes.",
+          "Its most famous landmark is a bay dotted with thousands of dramatic limestone pillars."
+        ],
+        "easy": [
+          "It is a Southeast Asian country shaped like a long, narrow 'S.'",
+          "It fought a major war against the United States that ended in 1975.",
+          "Motorbikes vastly outnumber cars in its busy cities."
+        ]
+      }
+    },
+    {
+      "id": "indonesia",
+      "name": "Indonesia",
+      "emoji": "🇮🇩",
+      "difficulty": "medium",
+      "continent": "Asia",
+      "didYouKnow": "Indonesia has the world's second longest coastline and is the largest archipelago nation on Earth.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Bali_Indonesia.jpg/1280px-Bali_Indonesia.jpg",
+      "hints": {
+        "hard": [
+          "This country sits on the Pacific Ring of Fire and has over 130 active volcanoes.",
+          "It is the world's largest Muslim-majority country by population.",
+          "The 2004 Indian Ocean tsunami, one of history's deadliest disasters, devastated its northwestern shores."
+        ],
+        "medium": [
+          "It consists of over 17,000 islands and is home to more than 300 distinct ethnic groups.",
+          "Komodo dragons, the world's largest lizards, are found only on a few of its islands.",
+          "Bali, one of the world's most visited tourist destinations, is one of its islands."
+        ],
+        "easy": [
+          "It is the world's largest archipelago, made up of over 17,000 islands.",
+          "It is the fourth most populous country in the world.",
+          "Bali is its most famous island, known for temples, rice terraces, and beaches."
+        ]
+      }
+    },
+    {
+      "id": "pakistan",
+      "name": "Pakistan",
+      "emoji": "🇵🇰",
+      "difficulty": "medium",
+      "continent": "Asia",
+      "didYouKnow": "Pakistan has more glaciers outside the polar regions than any other country — over 7,000.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/K2_2006b.jpg/800px-K2_2006b.jpg",
+      "hints": {
+        "hard": [
+          "This country has the world's second highest concentration of glaciers outside of the poles.",
+          "It was created in 1947 as a homeland for Muslims during the partition of British India.",
+          "It is home to K2, the world's second highest mountain, considered more dangerous to climb than Everest."
+        ],
+        "medium": [
+          "Karachi, its largest city, is one of the most populous cities in the world.",
+          "It became the world's seventh nuclear-armed state when it tested weapons in 1998.",
+          "The ancient city of Mohenjo-daro, one of the oldest civilizations in the world, is located here."
+        ],
+        "easy": [
+          "It is an Islamic republic in South Asia.",
+          "It shares a border with India, Afghanistan, Iran, and China.",
+          "Its flag is green with a white crescent and star — and a white stripe on the left."
+        ]
+      }
+    },
+    {
+      "id": "azerbaijan",
+      "name": "Azerbaijan",
+      "emoji": "🇦🇿",
+      "difficulty": "hard",
+      "continent": "Asia",
+      "didYouKnow": "Azerbaijan was the first country in the Muslim world to grant women the right to vote, in 1918.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Flame_Towers_Baku_2013.jpg/800px-Flame_Towers_Baku_2013.jpg",
+      "hints": {
+        "hard": [
+          "This country's capital contains three skyscrapers designed to resemble flames, visible for miles at night.",
+          "It sits at the crossroads of Eastern Europe and Western Asia and borders five countries.",
+          "It controls the Nagorno-Karabakh region, over which it fought two wars with a neighbouring country."
+        ],
+        "medium": [
+          "Its capital sits on the Caspian Sea, the world's largest landlocked body of water.",
+          "It has been known as the 'Land of Fire' for millennia due to naturally occurring surface oil fires.",
+          "It is part of the South Caucasus region and shares cultural ties with Turkey."
+        ],
+        "easy": [
+          "It is a former Soviet republic located between Russia, Iran, and the Caspian Sea.",
+          "Its capital city is Baku.",
+          "Its flag has three stripes — blue, red, and green — with a white crescent and eight-pointed star."
+        ]
+      }
+    },
+    {
+      "id": "belarus",
+      "name": "Belarus",
+      "emoji": "🇧🇾",
+      "difficulty": "hard",
+      "continent": "Europe",
+      "didYouKnow": "Belarus is one of the few countries that still retains significant Soviet-era iconography, including a modified version of the Soviet flag.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Minsk_20th_July_2014_-_Independence_Square_%2814774940261%29.jpg/1280px-Minsk_20th_July_2014_-_Independence_Square_%2814774940261%29.jpg",
+      "hints": {
+        "hard": [
+          "This landlocked country has been described as 'Europe's last dictatorship' and has been led by the same man since 1994.",
+          "It was disproportionately devastated in World War II, losing about a quarter of its population.",
+          "It is one of the few countries in the world that has maintained a Soviet-style state economy."
+        ],
+        "medium": [
+          "It is a landlocked country in Eastern Europe, bordered by Russia, Ukraine, Poland, and the Baltic states.",
+          "Its capital was almost entirely rebuilt in the Soviet architectural style after being destroyed in WWII.",
+          "It shares the closest cultural, linguistic, and political ties with Russia of any former Soviet republic."
+        ],
+        "easy": [
+          "It is a landlocked former Soviet republic in Eastern Europe.",
+          "Its capital city is Minsk.",
+          "Its flag features a distinctive red and green horizontal stripe with a traditional decorative pattern."
+        ]
+      }
+    },
+    {
+      "id": "bolivia",
+      "name": "Bolivia",
+      "emoji": "🇧🇴",
+      "difficulty": "hard",
+      "continent": "South America",
+      "didYouKnow": "Bolivia is one of only two landlocked countries in South America, and it has two capitals — one constitutional and one administrative.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Salar_de_Uyuni%2C_Bolivia.jpg/1280px-Salar_de_Uyuni%2C_Bolivia.jpg",
+      "hints": {
+        "hard": [
+          "This country is home to the Salar de Uyuni, the world's largest salt flat, which contains over half the world's known lithium reserves.",
+          "It has two capital cities — one serves as the seat of government and one as the constitutional capital.",
+          "Its main capital is the highest major city in the world at over 3,600 metres above sea level."
+        ],
+        "medium": [
+          "It is a landlocked country in South America that lost its ocean access in a war in the 1880s.",
+          "Lake Titicaca, the world's highest navigable lake, sits on its border with Peru.",
+          "Its population is majority indigenous, making it unique among South American nations."
+        ],
+        "easy": [
+          "It is a landlocked South American country known for its dramatic Andean landscapes.",
+          "The Salar de Uyuni, the world's largest salt flat, is located here.",
+          "Lake Titicaca, the highest navigable lake in the world, is on its border."
+        ]
+      }
+    },
+    {
+      "id": "cambodia",
+      "name": "Cambodia",
+      "emoji": "🇰🇭",
+      "difficulty": "hard",
+      "continent": "Asia",
+      "didYouKnow": "Angkor Wat is the largest religious monument ever constructed, covering over 400 square kilometres.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Angkor_Wat%2C_Camboge.jpg/1280px-Angkor_Wat%2C_Camboge.jpg",
+      "hints": {
+        "hard": [
+          "This country's population was reduced by roughly 25% under a radical communist regime in the 1970s.",
+          "The temple complex here is the largest religious monument on Earth and appears on its national flag.",
+          "It borders Thailand, Laos, and Vietnam and was heavily bombed by the US during the Vietnam War era."
+        ],
+        "medium": [
+          "The Khmer Rouge regime, led by Pol Pot, committed genocide here between 1975 and 1979.",
+          "Angkor Wat, its most famous landmark, was built in the 12th century as a Hindu temple.",
+          "The Mekong River flows through this country, supporting agriculture for millions."
+        ],
+        "easy": [
+          "Angkor Wat, the world's largest religious monument, is located here.",
+          "It is a small country in Southeast Asia.",
+          "Its flag is the only national flag in the world featuring a building."
+        ]
+      }
+    },
+    {
+      "id": "ecuador",
+      "name": "Ecuador",
+      "emoji": "🇪🇨",
+      "difficulty": "hard",
+      "continent": "South America",
+      "didYouKnow": "Ecuador was the first country in the world to grant rights to nature in its constitution, in 2008.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Tortoise_Galapagos.jpg/1280px-Tortoise_Galapagos.jpg",
+      "hints": {
+        "hard": [
+          "This country's name literally translates to 'equator' in Spanish, as the geographic line runs through it.",
+          "It was the first country in the world to grant constitutional rights to nature.",
+          "Due to its equatorial bulge, the summit of its volcano Chimborazo is the point on Earth farthest from the planet's core — farther than Everest."
+        ],
+        "medium": [
+          "The Galápagos Islands, which inspired Charles Darwin's theory of evolution, belong to this country.",
+          "It is the world's largest exporter of bananas.",
+          "It uses the US dollar as its official currency despite being an independent nation."
+        ],
+        "easy": [
+          "The Galápagos Islands, famous for their unique wildlife, are part of this country.",
+          "It is named after the equator, which passes directly through it.",
+          "It is a small South American country bordered by Colombia and Peru."
+        ]
+      }
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "emoji": "🇬🇭",
+      "difficulty": "hard",
+      "continent": "Africa",
+      "didYouKnow": "Ghana was the first sub-Saharan African country to gain independence from colonial rule, in 1957.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Cape_Coast_Castle_Ghana.jpg/1280px-Cape_Coast_Castle_Ghana.jpg",
+      "hints": {
+        "hard": [
+          "This country was the first sub-Saharan African nation to gain independence from colonial rule, in 1957.",
+          "Its Ashanti kingdom was one of West Africa's most powerful pre-colonial states, known for its gold and Kente cloth.",
+          "Lake Volta, created by the Akosombo Dam, is one of the world's largest man-made lakes by area."
+        ],
+        "medium": [
+          "It is the world's second largest producer of cocoa beans.",
+          "Its historical name, the Gold Coast, reflected the enormous gold wealth that attracted European traders.",
+          "Its capital is Accra, and it is considered one of Africa's most stable democracies."
+        ],
+        "easy": [
+          "It is a West African country known for its political stability and cocoa production.",
+          "It was the first African country south of the Sahara to gain independence.",
+          "Its flag features three horizontal stripes of red, gold, and green with a black star."
+        ]
+      }
+    },
+    {
+      "id": "jordan",
+      "name": "Jordan",
+      "emoji": "🇯🇴",
+      "difficulty": "hard",
+      "continent": "Asia",
+      "didYouKnow": "Jordan hosts one of the highest numbers of refugees per capita in the world, mainly from Syria, Palestine, and Iraq.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Petra_Jordan_BW_21.JPG/1280px-Petra_Jordan_BW_21.JPG",
+      "hints": {
+        "hard": [
+          "This country contains the Dead Sea, the lowest point on Earth's surface and the world's saltiest large body of water.",
+          "Its ancient rose-red city, carved directly into cliff faces, is considered one of the New Seven Wonders of the World.",
+          "It is a constitutional monarchy that has maintained relative stability despite being surrounded by conflict."
+        ],
+        "medium": [
+          "The ancient Nabataean city of Petra, carved from pink sandstone, is its most visited landmark.",
+          "The Dead Sea, on its western border, is so salty that swimmers float without effort.",
+          "It borders Israel, Syria, Iraq, and Saudi Arabia, and has peace treaties with two of them."
+        ],
+        "easy": [
+          "The ancient city of Petra, with its rose-red stone facades, is located here.",
+          "The Dead Sea, the lowest point on Earth, is on its border.",
+          "It is a small Middle Eastern kingdom."
+        ]
+      }
+    },
+    {
+      "id": "morocco",
+      "name": "Morocco",
+      "emoji": "🇲🇦",
+      "difficulty": "hard",
+      "continent": "Africa",
+      "didYouKnow": "The University of Al-Qarawiyyin in Morocco, founded in 859 AD, is the world's oldest continuously operating university.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Marrakech_Morocco.jpg/1280px-Marrakech_Morocco.jpg",
+      "hints": {
+        "hard": [
+          "This country is the only African nation with coastlines on both the Atlantic Ocean and the Mediterranean Sea.",
+          "Its city of Fez contains the world's oldest continuously operating university, founded in 859 AD.",
+          "It controls over 70% of the world's proven phosphate reserves."
+        ],
+        "medium": [
+          "Its famous medinas — ancient walled city centres — are UNESCO-listed and easy to get lost in.",
+          "The Sahara Desert begins at its southern edge.",
+          "Casablanca is its largest city, but Rabat is its capital — made famous by a classic Hollywood film."
+        ],
+        "easy": [
+          "It is located at the northwestern tip of Africa, just across the Strait of Gibraltar from Spain.",
+          "Marrakech, with its famous souks and Djemaa el-Fna square, is one of its most visited cities.",
+          "Its flag is red with a green pentagram (five-pointed star) in the centre."
+        ]
+      }
+    },
+    {
+      "id": "myanmar",
+      "name": "Myanmar",
+      "emoji": "🇲🇲",
+      "difficulty": "hard",
+      "continent": "Asia",
+      "didYouKnow": "Myanmar uses its own unique calendar system and time zone — UTC+6:30 — one of the few countries with a half-hour offset.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Shwedagon_Pagoda_Rangoon.jpg/800px-Shwedagon_Pagoda_Rangoon.jpg",
+      "hints": {
+        "hard": [
+          "This country uses a unique time zone — UTC+6:30 — making it one of the rare nations with a 30-minute offset.",
+          "It was under military dictatorship for most of its post-independence history, including a coup in 2021.",
+          "It is the world's largest producer of rubies and jade."
+        ],
+        "medium": [
+          "Its famous Shwedagon Pagoda, plated in real gold and encrusted with thousands of diamonds, is one of Buddhism's holiest sites.",
+          "It was known by a different name under British colonial rule, which some countries still use.",
+          "It shares borders with China, India, Thailand, Laos, and Bangladesh."
+        ],
+        "easy": [
+          "It is a Southeast Asian country formerly known as Burma.",
+          "It has been under military rule for much of its history.",
+          "Thousands of ancient Buddhist pagodas fill the plains of Bagan."
+        ]
+      }
+    },
+    {
+      "id": "peru",
+      "name": "Peru",
+      "emoji": "🇵🇪",
+      "difficulty": "hard",
+      "continent": "South America",
+      "didYouKnow": "Peru is considered the origin of the potato — over 3,000 varieties are grown there, far more than anywhere else on Earth.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/1280px-Machu_Picchu%2C_Peru.jpg",
+      "hints": {
+        "hard": [
+          "This country was the heart of the Inca Empire, the largest pre-Columbian empire in the Americas.",
+          "It is the origin of the potato and home to over 3,000 native varieties of it.",
+          "Lake Titicaca, on its border, was believed by the Inca to be the birthplace of the sun."
+        ],
+        "medium": [
+          "The ancient Inca citadel of Machu Picchu, set high in the Andes, is one of the world's most iconic archaeological sites.",
+          "It is the world's largest producer of silver and second largest of copper.",
+          "Its cuisine is considered one of the most sophisticated in the world, blending indigenous and immigrant traditions."
+        ],
+        "easy": [
+          "Machu Picchu, the ancient Inca mountaintop city, is located here.",
+          "It is a South American country on the Pacific coast.",
+          "The Amazon River originates from its Andes mountains."
+        ]
+      }
+    },
+    {
+      "id": "bhutan",
+      "name": "Bhutan",
+      "emoji": "🇧🇹",
+      "difficulty": "impossible",
+      "continent": "Asia",
+      "didYouKnow": "Bhutan measures its success not by GDP but by Gross National Happiness — an index it invented and the world has adopted in various forms.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Paro_Taktsang%2C_the_Tiger%27s_Nest_Monastery.jpg/800px-Paro_Taktsang%2C_the_Tiger%27s_Nest_Monastery.jpg",
+      "hints": {
+        "hard": [
+          "This country measures societal success using Gross National Happiness rather than GDP.",
+          "It is the only carbon-negative country in the world — it absorbs more CO₂ than it produces.",
+          "Television and the internet were only permitted here in 1999, among the last countries in the world to allow them."
+        ],
+        "medium": [
+          "It is a tiny Buddhist kingdom landlocked between India and China in the eastern Himalayas.",
+          "It charges tourists a daily fee of several hundred dollars specifically to limit visitor numbers.",
+          "Its national animal is the takin — a bizarre creature that looks like a cross between a wildebeest and a goat."
+        ],
+        "easy": [
+          "It is a small Himalayan kingdom famous for measuring Gross National Happiness.",
+          "It is one of the least visited countries in the world.",
+          "Its flag features a white dragon on a divided orange and yellow background."
+        ]
+      }
+    },
+    {
+      "id": "djibouti",
+      "name": "Djibouti",
+      "emoji": "🇩🇯",
+      "difficulty": "impossible",
+      "continent": "Africa",
+      "didYouKnow": "Djibouti hosts military bases from the United States, France, China, Japan, and Italy — more foreign military presences than any other country.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Lake_Assal.jpg/1280px-Lake_Assal.jpg",
+      "hints": {
+        "hard": [
+          "This tiny country hosts military bases from more foreign nations than any other country in the world.",
+          "Lake Assal, on its territory, is the lowest point in Africa and the third lowest on Earth.",
+          "Its strategic location at the mouth of the Red Sea makes it one of the world's busiest shipping corridors."
+        ],
+        "medium": [
+          "It is one of the smallest countries in Africa, about the size of Massachusetts.",
+          "It has almost no agriculture or natural resources and imports nearly all its food.",
+          "Its economy relies almost entirely on its port and the income from foreign military bases."
+        ],
+        "easy": [
+          "It is a tiny country in the Horn of Africa.",
+          "It sits at the entrance to the Red Sea, across from Yemen.",
+          "Its capital city shares its name with the country itself."
+        ]
+      }
+    },
+    {
+      "id": "eritrea",
+      "name": "Eritrea",
+      "emoji": "🇪🇷",
+      "difficulty": "impossible",
+      "continent": "Africa",
+      "didYouKnow": "Eritrea has mandatory national service with no set end date — some citizens have served for over 20 years.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Asmara_streetscene.jpg/1280px-Asmara_streetscene.jpg",
+      "hints": {
+        "hard": [
+          "This country has mandatory national service with no legal end date, effectively making it indefinite.",
+          "Its capital city has the largest collection of modernist Art Deco architecture in the world, built during Italian colonization.",
+          "It fought a 30-year war of independence from its neighbour, finally gaining recognition in 1993."
+        ],
+        "medium": [
+          "It is one of the most isolated and closed countries in the world, often compared to North Korea.",
+          "It gained independence from Ethiopia in 1993 after a long guerrilla war.",
+          "Its capital, Asmara, is a UNESCO-listed city for its remarkable Italian colonial architecture."
+        ],
+        "easy": [
+          "It is a small East African country on the Red Sea coast.",
+          "It is one of the world's most isolated nations.",
+          "Its capital is Asmara."
+        ]
+      }
+    },
+    {
+      "id": "kiribati",
+      "name": "Kiribati",
+      "emoji": "🇰🇮",
+      "difficulty": "impossible",
+      "continent": "Oceania",
+      "didYouKnow": "Kiribati is the only country in the world to span all four hemispheres simultaneously.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Tarawa_Atoll_from_Air.jpg/1280px-Tarawa_Atoll_from_Air.jpg",
+      "hints": {
+        "hard": [
+          "This country is the only one in the world that spans all four hemispheres — north, south, east, and west.",
+          "It is one of the first countries that will disappear due to rising sea levels — most of its land sits less than 2 metres above sea level.",
+          "It crosses the International Date Line, meaning it has the same calendar date in places separated by 3,000 kilometres."
+        ],
+        "medium": [
+          "It is made up of 33 atolls scattered across the central Pacific Ocean.",
+          "Its name is pronounced 'Kiribas' — the 'ti' in its language sounds like 's.'",
+          "It has no high ground — its highest point is only about 3 metres above sea level."
+        ],
+        "easy": [
+          "It is a tiny Pacific island nation at risk of disappearing due to climate change.",
+          "It is one of the least-known countries in the world.",
+          "Its name is pronounced 'Kiribas.'"
+        ]
+      }
+    },
+    {
+      "id": "turkmenistan",
+      "name": "Turkmenistan",
+      "emoji": "🇹🇲",
+      "difficulty": "impossible",
+      "continent": "Asia",
+      "didYouKnow": "Turkmenistan has the fourth largest natural gas reserves in the world, yet most of its population lives in poverty.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Darvasa_gas_crater_panorama.jpg/1280px-Darvasa_gas_crater_panorama.jpg",
+      "hints": {
+        "hard": [
+          "This country contains a massive burning gas crater in the middle of its desert, nicknamed the 'Door to Hell,' which has been on fire since 1971.",
+          "Its former dictator renamed months of the year and days of the week after himself and his family members.",
+          "It has the fourth largest natural gas reserves in the world but remains one of the most isolated nations."
+        ],
+        "medium": [
+          "It is one of the world's most repressive and secretive states, with extremely restricted access for foreigners.",
+          "Its capital, Ashgabat, holds the record for the most white marble buildings in the world.",
+          "It is a landlocked Central Asian country bordering Iran and Afghanistan."
+        ],
+        "easy": [
+          "It is a reclusive former Soviet republic in Central Asia.",
+          "It has a flaming gas crater in its desert that has been burning for over 50 years.",
+          "Its capital is Ashgabat."
+        ]
+      }
+    }
+  ]
+}

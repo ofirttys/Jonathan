@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoTrivia — Guess the Country</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Animated SVG Background -->
+  <div class="bg-container" aria-hidden="true">
+    <svg class="bg-svg" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <!-- Grid lines -->
+      <g class="grid-lines" opacity="0.15">
+        <line x1="0" y1="150" x2="1440" y2="150"/>
+        <line x1="0" y1="300" x2="1440" y2="300"/>
+        <line x1="0" y1="450" x2="1440" y2="450"/>
+        <line x1="0" y1="600" x2="1440" y2="600"/>
+        <line x1="0" y1="750" x2="1440" y2="750"/>
+        <line x1="180" y1="0" x2="180" y2="900"/>
+        <line x1="360" y1="0" x2="360" y2="900"/>
+        <line x1="540" y1="0" x2="540" y2="900"/>
+        <line x1="720" y1="0" x2="720" y2="900"/>
+        <line x1="900" y1="0" x2="900" y2="900"/>
+        <line x1="1080" y1="0" x2="1080" y2="900"/>
+        <line x1="1260" y1="0" x2="1260" y2="900"/>
+      </g>
+      <!-- Dotted flight paths -->
+      <g class="flight-paths" opacity="0.2">
+        <path d="M 80 700 Q 400 200 900 350" fill="none" stroke-dasharray="6 10" class="flight-path fp1"/>
+        <path d="M 200 100 Q 700 500 1350 200" fill="none" stroke-dasharray="6 10" class="flight-path fp2"/>
+        <path d="M 50 400 Q 500 650 1400 300" fill="none" stroke-dasharray="6 10" class="flight-path fp3"/>
+        <path d="M 300 800 Q 800 300 1380 600" fill="none" stroke-dasharray="6 10" class="flight-path fp4"/>
+      </g>
+      <!-- Compass rose - bottom left -->
+      <g class="compass" transform="translate(100, 780)" opacity="0.18">
+        <circle r="38" fill="none" stroke="currentColor" stroke-width="1"/>
+        <polygon points="0,-36 4,-10 0,-16 -4,-10" fill="currentColor"/>
+        <polygon points="0,36 4,10 0,16 -4,10" fill="currentColor" opacity="0.5"/>
+        <polygon points="-36,0 -10,4 -16,0 -10,-4" fill="currentColor" opacity="0.5"/>
+        <polygon points="36,0 10,4 16,0 10,-4" fill="currentColor" opacity="0.5"/>
+        <circle r="4" fill="currentColor"/>
+        <text y="-46" text-anchor="middle" font-size="11" font-weight="600" fill="currentColor">N</text>
+        <text y="58" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.6">S</text>
+        <text x="48" y="4" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.6">E</text>
+        <text x="-48" y="4" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.6">W</text>
+      </g>
+      <!-- Compass rose - top right -->
+      <g class="compass" transform="translate(1340, 120)" opacity="0.12">
+        <circle r="28" fill="none" stroke="currentColor" stroke-width="1"/>
+        <polygon points="0,-26 3,-7 0,-12 -3,-7" fill="currentColor"/>
+        <polygon points="0,26 3,7 0,12 -3,7" fill="currentColor" opacity="0.5"/>
+        <polygon points="-26,0 -7,3 -12,0 -7,-3" fill="currentColor" opacity="0.5"/>
+        <polygon points="26,0 7,3 12,0 7,-3" fill="currentColor" opacity="0.5"/>
+        <circle r="3" fill="currentColor"/>
+        <text y="-34" text-anchor="middle" font-size="9" font-weight="600" fill="currentColor">N</text>
+      </g>
+      <!-- Small dot markers (cities on a map) -->
+      <g class="map-dots" opacity="0.25">
+        <circle cx="280" cy="180" r="3" fill="currentColor"/>
+        <circle cx="280" cy="180" r="7" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        <circle cx="720" cy="260" r="3" fill="currentColor"/>
+        <circle cx="720" cy="260" r="7" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        <circle cx="1100" cy="340" r="3" fill="currentColor"/>
+        <circle cx="1100" cy="340" r="7" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        <circle cx="400" cy="600" r="3" fill="currentColor"/>
+        <circle cx="400" cy="600" r="7" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        <circle cx="950" cy="650" r="3" fill="currentColor"/>
+        <circle cx="950" cy="650" r="7" fill="none" stroke="currentColor" stroke-width="0.5"/>
+        <circle cx="160" cy="440" r="2" fill="currentColor"/>
+        <circle cx="1280" cy="500" r="2" fill="currentColor"/>
+        <circle cx="600" cy="130" r="2" fill="currentColor"/>
+        <circle cx="830" cy="750" r="2" fill="currentColor"/>
+      </g>
+      <!-- Globe wireframe circle -->
+      <g opacity="0.06" transform="translate(1200, 600)">
+        <circle r="220" fill="none" stroke="currentColor" stroke-width="1"/>
+        <ellipse rx="220" ry="60" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <ellipse rx="220" ry="120" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <ellipse rx="220" ry="180" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <line x1="-220" y1="0" x2="220" y2="0" stroke="currentColor" stroke-width="0.8"/>
+        <line x1="0" y1="-220" x2="0" y2="220" stroke="currentColor" stroke-width="0.8"/>
+        <ellipse rx="60" ry="220" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <ellipse rx="120" ry="220" fill="none" stroke="currentColor" stroke-width="0.8"/>
+        <ellipse rx="180" ry="220" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      </g>
+      <!-- Smaller globe -->
+      <g opacity="0.05" transform="translate(140, 200)">
+        <circle r="130" fill="none" stroke="currentColor" stroke-width="1"/>
+        <ellipse rx="130" ry="36" fill="none" stroke="currentColor" stroke-width="0.7"/>
+        <ellipse rx="130" ry="75" fill="none" stroke="currentColor" stroke-width="0.7"/>
+        <ellipse rx="130" ry="110" fill="none" stroke="currentColor" stroke-width="0.7"/>
+        <line x1="-130" y1="0" x2="130" y2="0" stroke="currentColor" stroke-width="0.7"/>
+        <line x1="0" y1="-130" x2="0" y2="130" stroke="currentColor" stroke-width="0.7"/>
+        <ellipse rx="36" ry="130" fill="none" stroke="currentColor" stroke-width="0.7"/>
+        <ellipse rx="75" ry="130" fill="none" stroke="currentColor" stroke-width="0.7"/>
+      </g>
+      <!-- Floating plane icons -->
+      <text class="plane plane1" x="350" y="320" font-size="18">✈</text>
+      <text class="plane plane2" x="900" y="480" font-size="14">✈</text>
+      <text class="plane plane3" x="1150" y="160" font-size="12">✈</text>
+    </svg>
+  </div>
+
+  <!-- ======================== SPLASH SCREEN ======================== -->
+  <div id="splash-screen" class="screen active">
+    <div class="splash-content">
+      <div class="logo-area">
+        <div class="logo-globe">🌍</div>
+        <h1 class="logo-title">GeoTrivia</h1>
+        <p class="logo-subtitle">Guess the country from clues — one hint at a time</p>
+      </div>
+
+      <div class="stats-bar" id="splash-stats">
+        <div class="stat-chip"><span class="stat-num" id="splash-total-score">0</span><span class="stat-label">Total Score</span></div>
+        <div class="stat-chip"><span class="stat-num" id="splash-streak">0</span><span class="stat-label">Best Streak</span></div>
+        <div class="stat-chip"><span class="stat-num" id="splash-games">0</span><span class="stat-label">Games Played</span></div>
+      </div>
+
+      <div class="difficulty-section">
+        <h2 class="section-title">Choose Difficulty</h2>
+        <div class="difficulty-grid">
+          <button class="diff-card" data-difficulty="easy">
+            <span class="diff-icon">🟢</span>
+            <span class="diff-name">Easy</span>
+            <span class="diff-desc">Well-known countries</span>
+            <span class="diff-mult">×1 multiplier</span>
+          </button>
+          <button class="diff-card" data-difficulty="medium">
+            <span class="diff-icon">🟡</span>
+            <span class="diff-name">Medium</span>
+            <span class="diff-desc">Moderate challenge</span>
+            <span class="diff-mult">×1.5 multiplier</span>
+          </button>
+          <button class="diff-card" data-difficulty="hard">
+            <span class="diff-icon">🔴</span>
+            <span class="diff-name">Hard</span>
+            <span class="diff-desc">Obscure countries</span>
+            <span class="diff-mult">×2 multiplier</span>
+          </button>
+          <button class="diff-card" data-difficulty="impossible">
+            <span class="diff-icon">💀</span>
+            <span class="diff-name">Impossible</span>
+            <span class="diff-desc">Almost unknown</span>
+            <span class="diff-mult">×2.5 multiplier</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="how-to-play">
+        <h3>How to play</h3>
+        <ul>
+          <li>🔒 You get up to <strong>5 hints</strong> — hardest first, easiest last</li>
+          <li>🎯 Guess earlier = more points</li>
+          <li>⏱️ Guess faster = bonus points</li>
+          <li>🔥 Win streaks multiply your score</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== GAME SCREEN ======================== -->
+  <div id="game-screen" class="screen">
+    <div class="game-wrapper">
+
+      <!-- Top bar -->
+      <div class="top-bar">
+        <button class="btn-icon" id="btn-home" title="Home">🏠</button>
+        <div class="game-title-small">
+          <span class="logo-globe-sm">🌍</span>
+          <span>GeoTrivia</span>
+        </div>
+        <div class="top-right-stats">
+          <div class="streak-badge" id="streak-display">🔥 <span id="current-streak">0</span></div>
+          <div class="score-badge">⭐ <span id="current-score">0</span></div>
+        </div>
+      </div>
+
+      <!-- Round info -->
+      <div class="round-info">
+        <span id="difficulty-badge" class="diff-badge">Easy</span>
+        <span id="round-label">Hint 1 of 5 — Hard</span>
+        <div class="timer-wrap">
+          <div class="timer-ring">
+            <svg viewBox="0 0 44 44" class="timer-svg">
+              <circle cx="22" cy="22" r="18" class="timer-track"/>
+              <circle cx="22" cy="22" r="18" class="timer-progress" id="timer-circle"/>
+            </svg>
+            <span id="timer-display" class="timer-text">3:00</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hints container -->
+      <div class="hints-container" id="hints-container">
+        <!-- Hints injected by JS -->
+      </div>
+
+      <!-- Wrong guesses indicator -->
+      <div class="wrong-indicators" id="wrong-indicators">
+        <span class="wi-label">Guesses:</span>
+        <span class="wi-dot" id="wi-0">○</span>
+        <span class="wi-dot" id="wi-1">○</span>
+        <span class="wi-dot" id="wi-2">○</span>
+        <span class="wi-dot" id="wi-3">○</span>
+        <span class="wi-dot" id="wi-4">○</span>
+      </div>
+
+      <!-- Guess area -->
+      <div class="guess-area">
+        <div class="guess-input-wrap">
+          <div class="custom-select" id="custom-select">
+            <div class="cs-display" id="cs-display" tabindex="0">
+              <span id="cs-text">Select a country…</span>
+              <span class="cs-arrow">▾</span>
+            </div>
+            <div class="cs-dropdown" id="cs-dropdown">
+              <input type="text" class="cs-search" id="cs-search" placeholder="Search countries…" autocomplete="off"/>
+              <ul class="cs-list" id="cs-list"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="guess-buttons">
+          <button class="btn-guess" id="btn-guess">Guess 🎯</button>
+          <button class="btn-giveup" id="btn-giveup">Give Up 🏳️</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================== RESULT SCREEN ======================== -->
+  <div id="result-screen" class="screen">
+    <div class="result-card" id="result-card">
+
+      <div class="result-header" id="result-header">
+        <div class="result-emoji" id="result-emoji">🎉</div>
+        <h2 id="result-title">You got it!</h2>
+        <p id="result-subtitle">You guessed it in 2 hints</p>
+      </div>
+
+      <!-- Country reveal -->
+      <div class="country-reveal" id="country-reveal">
+        <span id="result-flag">🇧🇷</span>
+        <span id="result-country-name">Brazil</span>
+      </div>
+
+      <!-- Country image -->
+      <div class="country-image-wrap">
+        <img id="country-image" src="" alt="" class="country-image" />
+      </div>
+
+      <!-- Score breakdown -->
+      <div class="score-breakdown" id="score-breakdown">
+        <div class="sb-row">
+          <span>Base score</span>
+          <span id="sb-base">1000</span>
+        </div>
+        <div class="sb-row">
+          <span>Difficulty (×<span id="sb-mult">1</span>)</span>
+          <span id="sb-after-mult">1000</span>
+        </div>
+        <div class="sb-row" id="sb-timer-row">
+          <span>Speed bonus</span>
+          <span id="sb-timer">+300</span>
+        </div>
+        <div class="sb-row" id="sb-streak-row">
+          <span>Streak bonus</span>
+          <span id="sb-streak">+50</span>
+        </div>
+        <div class="sb-row sb-total">
+          <span>Round total</span>
+          <span id="sb-total">1350</span>
+        </div>
+      </div>
+
+      <!-- Did you know -->
+      <div class="dyk-box" id="dyk-box">
+        <span class="dyk-label">💡 Did you know?</span>
+        <p id="dyk-text"></p>
+      </div>
+
+      <!-- Streak lost notice -->
+      <div class="streak-lost" id="streak-lost" style="display:none">
+        😢 Streak lost — you were at <strong id="streak-lost-num">3</strong>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="result-actions">
+        <button class="btn-next" id="btn-next">Next Country →</button>
+        <button class="btn-home-result" id="btn-home-result">🏠 Home</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Sound toggle -->
+  <button class="sound-toggle" id="sound-toggle" title="Toggle sound">🔊</button>
+
+  <!-- Audio elements -->
+  <audio id="snd-correct" preload="auto">
+    <source src="https://cdn.freesound.org/previews/270/270404_5123851-lq.mp3" type="audio/mpeg"/>
+  </audio>
+  <audio id="snd-wrong" preload="auto">
+    <source src="https://cdn.freesound.org/previews/362/362202_1661766-lq.mp3" type="audio/mpeg"/>
+  </audio>
+  <audio id="snd-win" preload="auto">
+    <source src="https://cdn.freesound.org/previews/270/270333_5123851-lq.mp3" type="audio/mpeg"/>
+  </audio>
+  <audio id="snd-lose" preload="auto">
+    <source src="https://cdn.freesound.org/previews/180/180138_1643509-lq.mp3" type="audio/mpeg"/>
+  </audio>
+  <audio id="snd-tick" preload="auto">
+    <source src="https://cdn.freesound.org/previews/399/399934_7255534-lq.mp3" type="audio/mpeg"/>
+  </audio>
+
+  <script src="game.js"></script>
+</body>
+</html>
